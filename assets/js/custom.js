@@ -91,22 +91,6 @@ function updateProjectContent(a, b, c, d, e) {
   projectThumb.innerHTML = e;
 }
 
-function clearProjectContent() {
-  var projectTitle = document.querySelector('.project-title');
-  var projectStack = document.querySelector('.project-stack');
-  var projectDesign = document.querySelector('.project-design');
-  var projectUrl   = document.querySelector('.project-url');
-  var projectLink  = document.querySelector('.project-link');
-  var projectThumb = document.querySelector('.project-thumb');
-
-  if (projectTitle) projectTitle.innerHTML = '';
-  if (projectStack) projectStack.innerHTML = '';
-  if (projectDesign) projectDesign.innerHTML = '';
-  if (projectUrl)   projectUrl.innerHTML = '';
-  if (projectLink)  projectLink.removeAttribute('href');
-  if (projectThumb) projectThumb.innerHTML = '';
-}
-
 function updateProjectContent(a, b, c, d, e) {
   let projectTitle = document.querySelector('.project-title');
   let projectStack = document.querySelector('.project-stack');
