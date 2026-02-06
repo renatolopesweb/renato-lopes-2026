@@ -112,9 +112,9 @@ function updateProjectContent(a, b, d, e) {
         const flagEs = document.querySelector('.flag-es');
         
         const descriptionSection = document.querySelector('.description-text');
-        const descriptionPt = `Olá, sou o <strong>Renato Lopes</strong>, trabalho em criação de websites usando CMSs Adobe AEM, Drupal, Wordpress, Wix e também handcoded HTML/CSS/JS. Para design (UX/UI) uso o Figma.`;
-        const descriptionEn = `Hi, I'm <strong>Renato Lopes</strong>, I work with website creation using CMSs Adobe AEM, Drupal, WordPress, Wix, and also handcoded HTML/CSS/JS. For design (UX/UI), I enjoyed in to Figma.`;
-        const descriptionEs = `Hola, soy <strong>Renato Lopes</strong>, creando sitios web usando CMSs Adobe AEM, Drupal, WordPress, Wix, y también handcoded HTML/CSS/JS. Para diseño (UX/UI),  uso el Figma.`;
+        const descriptionPt = `Sou especialista na <strong>criação de websites</strong>, com ampla experiência em plataformas CMS e desenvolvimento handcoded. Busco sempre fortalecer e aplicar práticas modernas de cultura digital nos projetos em que participo, aprimorando a comunicação voltada para a web. <a href="https://www.linkedin.com/in/renatolopesweb" target="_blank">linkedin.com/in/renatolopesweb <i class="fa-brands fa-linkedin"></i></a>`;
+        const descriptionEn = `I am a specialist in <strong>website creation</strong>, with extensive experience in CMS platforms and handcoded development. I strive to continuously strengthen and apply modern digital culture practices in the projects I participate in, enhancing web‑oriented communication. <a href="https://www.linkedin.com/in/renatolopesweb" target="_blank">linkedin.com/in/renatolopesweb <i class="fa-brands fa-linkedin"></i></a>`;
+        const descriptionEs = `Soy especialista en la <strong>creación de sitios web</strong>, con amplia experiencia en plataformas CMS y desarrollo handcoded. Siempre busco fortalecer y aplicar prácticas modernas de cultura digital en los proyectos en los que participo, mejorando la comunicación orientada a la web. <a href="https://www.linkedin.com/in/renatolopesweb" target="_blank">linkedin.com/in/renatolopesweb <i class="fa-brands fa-linkedin"></i></a>`;
         
         const ProjectSection = document.querySelector('.project-select');
         const ProjectPt = `Projetos selecionados`;
