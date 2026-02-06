@@ -43,7 +43,6 @@ main{
     }
 }
 .description{
-    align-content: center;
     background-color: #fafafa;
     box-shadow: -8px 15px 20px 2px #b5b5b5;
     min-height: 100vh;
@@ -52,6 +51,21 @@ main{
 }
 .description a{
     color: var(--color-blue);
+}
+.translate{
+    margin-bottom: 2rem;
+}
+.translate button,
+.translate i {
+    background-color: transparent;
+    color: var(--color-gray-4);
+    border: 0;
+    font-size: .8rem;
+    margin-right: .5rem;
+}
+.translate button:hover
+{
+    color: var(--color-gray-6);
 }
 figure{
     margin-bottom: .5rem;
@@ -74,24 +88,26 @@ figure img{
     width: 100px;
 }
 .about span{
-    color: #999;
+    color: var(--color-gray-4);
     font-size: .8rem;
     text-transform: uppercase;
 }
 .about h1{
     font-size: 1rem;
     font-weight: bold;
+    margin-bottom: 2rem;
     text-transform: uppercase;
 }
 .about p{
     line-height: 1.8;
-    margin: 2rem 0 4rem 0;
 }
-
+.links strong{
+    font-weight: normal;
+}
 .links h2{
     font-size: 1.1rem;
-    font-weight: normal;
     margin-bottom: 1rem;
+    margin-top: 4rem;
 }
 .links ul {
   list-style-type: none;

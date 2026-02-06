@@ -26,26 +26,31 @@
 <body>
     <main>
         <section class="description">
+            <div class="translate">
+            <button class="flag-pt">PT</button> 
+            <button class="flag-en">EN</button>
+            <button class="flag-es">ES</button>
+        </div>
             <figure>
-                <img src="./assets/images/renato-lopes-web.png" alt="Renato Lopes Web" class="photo">
+                <img src="./assets/images/renato-lopes-web.jpg" alt="Renato Lopes Web" class="photo">
             </figure>
             <div class="about">
                 <span>Webdesigner | Frontend</span>
                 <h1>Renato Lopes</h1>
-                <p>Especialista em criar experiências digitais que equilibram estética minimalista e funcionalidade
+                <p class="description-text">Especialista em criar experiências digitais que equilibram estética minimalista e funcionalidade
                     técnica. Minha abordagem foca em tipografia refinada, espaços negativos estratégicos e performance
-                    de ponta para interfaces modernas. <a href="">contato@renatolopesweb.com.br <i class="fa-regular fa-envelope"></i></a></p>
+                    de ponta para interfaces modernas.</p>
+                    <p><a href="">contato@renatolopesweb.com.br <i class="fa-regular fa-envelope"></i></a></p>
             </div>
             <div class="links">
-                <h2><i class="fa-solid fa-folder-open"></i> Projetos Selecionados:</h2>
+                <h2><i class="fa-solid fa-folder-open"></i> <strong class="project-select"> Projetos Selecionados</strong>:</h2>
                 <ul class="links">
                     <li>
                        <a href="#project" onclick="openProject(
                             'AD Comunicação & Marketing (Bilíngue)', 
                             'Bootstrap ⋮ CSS Custom ⋮ Wordpress CMS ⋮ FTP FileZilla', 
-                            'Durable ⋮ Adobe Photoshop', 
                             'https:\/\/www.adcomunicacao.com.br',
-                            '<img src=\'./assets/images/case-1.jpg\' alt=\'Screenshoot Website AD Comunicação & Marketing\' />')">
+                            '<img src=\'./assets/images/demo.gif\' alt=\'Screenshoot Website AD Comunicação & Marketing\' />')">
                             AD Comunicação & Marketing (Bilíngue)
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><br><span>Web Site</span>
                         </a>
@@ -54,7 +59,6 @@
                         <a href="#project" onclick="openProject(
                             'Machado e Fernandes Associados', 
                             'Bootstrap ⋮ CSS Custom ⋮ Wordpress CMS ⋮ CPanell', 
-                            'Adobe Photoshop', 
                             'https:\/\/www.machadoefernandes.adv.br',
                             '<img src=\'./assets/images/case-2.jpg\' alt=\'Screenshoot Website Machado e Fernandes Associados\' />')">
                             Machado e Fernandes Associados
@@ -83,7 +87,6 @@
                 <h2 class="project-title"></h2>
             <ul>
                 <li><i class="fa-solid fa-mug-saucer"></i> <span class="project-stack"></span></li>
-                <li><i class="fa-solid fa-palette"></i> <span class="project-design"></span></li>
                 <li><i class="fa-solid fa-globe"></i> <a href="" class="project-link" target="_blank"><span class="project-url"></span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
             </ul>
             </article>

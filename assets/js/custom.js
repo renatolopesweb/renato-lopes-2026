@@ -73,39 +73,32 @@ function openProject(a, b, c, d, e) {
   }
 }
 
-function updateProjectContent(a, b, c, d, e) {
+function updateProjectContent(a, b, d, e) {
   var projectTitle = document.querySelector('.project-title');
   var projectStack = document.querySelector('.project-stack');
-  var projectDesign = document.querySelector('.project-design');
   var projectUrl   = document.querySelector('.project-url');
   var projectLink  = document.querySelector('.project-link');
   var projectThumb = document.querySelector('.project-thumb');
 
   projectTitle.innerHTML  = a;
   projectStack.innerHTML  = b;
-  projectDesign.innerHTML = c;
-
   projectUrl.innerHTML = d;
   projectLink.href     = d;
 
   projectThumb.innerHTML = e;
 }
 
-function updateProjectContent(a, b, c, d, e) {
+function updateProjectContent(a, b, d, e) {
   let projectTitle = document.querySelector('.project-title');
   let projectStack = document.querySelector('.project-stack');
-  let projectDesign = document.querySelector('.project-design');
   let projectUrl = document.querySelector('.project-url');
   let projectLink = document.querySelector('.project-link');
   let projectThumb = document.querySelector('.project-thumb');
 
   projectTitle.innerHTML = a;
   projectStack.innerHTML = b;
-  projectDesign.innerHTML = c;
-
   projectUrl.innerHTML = d;
   projectLink.href = d;
-
   projectThumb.innerHTML = e;
 }
 
@@ -113,55 +106,39 @@ function updateProjectContent(a, b, c, d, e) {
 
 
 
-                // TRANSLATE START
-        // const flagPt = document.querySelector('.flag-pt');
-        // const flagEn = document.querySelector('.flag-en');
-        // const flagEs = document.querySelector('.flag-es');
+        //         // TRANSLATE START
+        const flagPt = document.querySelector('.flag-pt');
+        const flagEn = document.querySelector('.flag-en');
+        const flagEs = document.querySelector('.flag-es');
+        
+        const descriptionSection = document.querySelector('.description-text');
+        const descriptionPt = `Olá, sou o <strong>Renato Lopes</strong>, trabalho em criação de websites usando CMSs Adobe AEM, Drupal, Wordpress, Wix e também handcoded HTML/CSS/JS. Para design (UX/UI) uso o Figma.`;
+        const descriptionEn = `Hi, I'm <strong>Renato Lopes</strong>, I work with website creation using CMSs Adobe AEM, Drupal, WordPress, Wix, and also handcoded HTML/CSS/JS. For design (UX/UI), I enjoyed in to Figma.`;
+        const descriptionEs = `Hola, soy <strong>Renato Lopes</strong>, creando sitios web usando CMSs Adobe AEM, Drupal, WordPress, Wix, y también handcoded HTML/CSS/JS. Para diseño (UX/UI),  uso el Figma.`;
+        
+        const ProjectSection = document.querySelector('.project-select');
+        const ProjectPt = `Projetos selecionados`;
+        const ProjectEn = `Selected projects`;
+        const ProjectEs = `Proyectos seleccionados`;
+        
+        (function () {
+            descriptionSection.innerHTML = descriptionPt
+        })();
+        flagPt.addEventListener('click', (e) => {
+            e.preventDefault()
+            descriptionSection.innerHTML = descriptionPt
+            ProjectSection.innerHTML = ProjectPt
+        })
+        flagEn.addEventListener('click', (e) => {
+            e.preventDefault()
+            descriptionSection.innerHTML = descriptionEn
+            ProjectSection.innerHTML = ProjectEn
+        })
+        flagEs.addEventListener('click', (e) => {
+            e.preventDefault()
+            descriptionSection.innerHTML = descriptionEs
+            ProjectSection.innerHTML = ProjectEs
+        })
 
-        // const txtContactPt = document.querySelector('.txt-contact-pt');
-        // const txtContactEn = document.querySelector('.txt-contact-en');
-        // const txtContactEs = document.querySelector('.txt-contact-es');
-
-        // const txtProjectPt = document.querySelector('.txt-project-pt');
-        // const txtProjectEn = document.querySelector('.txt-project-en');
-        // const txtProjectEs = document.querySelector('.txt-project-es');
-        
-        // const descriptionSection = document.querySelector('.description-text');
-        // const descriptionPt = `Olá, sou o <strong>Renato Lopes</strong>, trabalho em criação de websites usando CMSs Adobe AEM, Drupal, Wordpress, Wix e também handcoded HTML/CSS/JS. Para design (UX/UI) uso o Figma.`;
-        // const descriptionEn = `Hi, I'm <strong>Renato Lopes</strong>, I work with website creation using CMSs Adobe AEM, Drupal, WordPress, Wix, and also handcoded HTML/CSS/JS. For design (UX/UI), I enjoyed in to Figma.`;
-        // const descriptionEs = `Hola, soy <strong>Renato Lopes</strong>, creando sitios web usando CMSs Adobe AEM, Drupal, WordPress, Wix, y también handcoded HTML/CSS/JS. Para diseño (UX/UI),  uso el Figma.`;
-        
-        // const ContactSection = document.querySelector('.contact');
-        // const ContactPt = `Contato`;
-        // const ContactEn = `Contact`;
-        // const ContactEs = `Contacto`;
-        
-        // const ProjectSection = document.querySelector('.project');
-        // const ProjectPt = `Projetos`;
-        // const ProjectEn = `Projects`;
-        // const ProjectEs = `Proyectos`;
-        
-        // (function () {
-        //     descriptionSection.innerHTML = descriptionPt
-        // })();
-        // flagPt.addEventListener('click', (e) => {
-        //     e.preventDefault()
-        //     descriptionSection.innerHTML = descriptionPt
-        //     ContactSection.innerHTML = ContactPt
-        //     ProjectSection.innerHTML = ProjectPt
-        // })
-        // flagEn.addEventListener('click', (e) => {
-        //     e.preventDefault()
-        //     descriptionSection.innerHTML = descriptionEn
-        //     ContactSection.innerHTML = ContactEn
-        //     ProjectSection.innerHTML = ProjectEn
-        // })
-        // flagEs.addEventListener('click', (e) => {
-        //     e.preventDefault()
-        //     descriptionSection.innerHTML = descriptionEs
-        //     ContactSection.innerHTML = ContactEs
-        //     ProjectSection.innerHTML = ProjectEs
-        // })
-
-        // TRANSLATE END
+//        TRANSLATE END
 
