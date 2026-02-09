@@ -5,7 +5,8 @@
 
 :root {
     --color-black: #231f20;
-    --color-white: rgba(237, 237, 237, 0.439);
+    --color-white: #f5f5f5;
+    --color-white-2: #fff;
     --color-blue: blue;
     --color-gray-1: #FAFAFA;
     --color-gray-2: #e6e6e6;
@@ -43,15 +44,21 @@ main{
     }
 }
 .description{
-    background-color: #fafafa;
-    box-shadow: -8px 15px 20px 2px #b5b5b5;
+    background-color: #f8f6f6;
+    box-shadow: inset 2px -5px 20px 0px #b5b5b5;
     min-height: 100vh;
     padding: 2rem;
     z-index: 2;
 }
+@media (max-width: 992px) {
+    .description{
+        box-shadow: 0 0 0 0;
+    }
+}
 .description a{
     color: var(--color-blue);
 }
+
 .translate{
     margin-bottom: 2rem;
 }
@@ -60,8 +67,17 @@ main{
     background-color: transparent;
     color: var(--color-gray-4);
     border: 0;
-    font-size: .8rem;
+    font-size: .9rem;
     margin-right: .5rem;
+}
+@media (max-width: 992px) {
+    .translate{
+        text-align: right;
+    }
+    .translate button,
+.translate i {
+        font-size: 1rem;
+}
 }
 .translate button:hover
 {
@@ -82,7 +98,6 @@ figure::after{
     left: 100px;
 }
 figure img{
-    background-color: #fff;
     border-radius: 500px;
     box-shadow: 1px 1px 1px #e2e2e2;
     width: 100px;
@@ -139,7 +154,7 @@ figure img{
 }
 
 .links li:hover {
-  background-color: #fff; 
+  background-color: var(--color-white-2); 
   padding-left: 1rem;
 }
 .links li:hover i.fa-arrow-right {
@@ -148,7 +163,7 @@ figure img{
 }
 
 .links li.is-active {
-  background-color: #fff; 
+  background-color: var(--color-white-2); 
   padding-left: 1rem;
 }
 .links li.is-active i.fa-arrow-right {
@@ -169,22 +184,21 @@ figure img{
     text-transform: uppercase;
 }
 .projects {
-    background-color: #fff;
+    background-color: #f5f5f5;
   opacity: 0;
   transform: translateX(-50px);
   pointer-events: none;
   transition: opacity 0.4s ease, transform 0.4s ease;
 
 }
-@media (max-width: 992px) {
-    .projects{
-        min-height: 100vh;
-    }
-}
 .projects.show {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
+}
+@media (max-width: 992px) {
+  .projects { min-height: 0; }             
+  .projects.show { min-height: 100vh; }     
 }
 .projects.hide {
   opacity: 0;

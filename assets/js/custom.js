@@ -23,6 +23,9 @@
 
 
 
+
+
+
 let projects = document.querySelector('.projects');
 let isFirstLoad = true;
 let isAnimating = false;
@@ -84,23 +87,53 @@ function updateProjectContent(a, b, d, e) {
   projectStack.innerHTML  = b;
   projectUrl.innerHTML = d;
   projectLink.href     = d;
-
   projectThumb.innerHTML = e;
 }
 
-function updateProjectContent(a, b, d, e) {
-  let projectTitle = document.querySelector('.project-title');
-  let projectStack = document.querySelector('.project-stack');
-  let projectUrl = document.querySelector('.project-url');
-  let projectLink = document.querySelector('.project-link');
-  let projectThumb = document.querySelector('.project-thumb');
 
-  projectTitle.innerHTML = a;
-  projectStack.innerHTML = b;
-  projectUrl.innerHTML = d;
-  projectLink.href = d;
-  projectThumb.innerHTML = e;
+
+function clearProjectContent() {
+  var t = document.querySelector('.project-title');
+  var s = document.querySelector('.project-stack');
+  var u = document.querySelector('.project-url');
+  var l = document.querySelector('.project-link');
+  var th = document.querySelector('.project-thumb');
+
+  if (t) t.innerHTML = '';
+  if (s) s.innerHTML = '';
+  if (u) u.innerHTML = '';
+  if (l) l.removeAttribute('href');
+  if (th) th.innerHTML = '';
+
+  // Esconde ícones somente no CLEAR
+  document.querySelectorAll('.projects ul i').forEach(function(icon){
+    icon.style.display = 'none';
+  });
 }
+
+function updateProjectContent(a, b, c, d) {
+  var t = document.querySelector('.project-title');
+  var s = document.querySelector('.project-stack');
+  var u = document.querySelector('.project-url');
+  var l = document.querySelector('.project-link');
+  var th = document.querySelector('.project-thumb');
+
+  if (t) t.innerHTML = a || '';
+  if (s) s.innerHTML = b || '';
+  if (u) u.innerHTML = c || '';
+  if (l) {
+    if (c) l.setAttribute('href', c);
+    else l.removeAttribute('href');
+  }
+  if (th) th.innerHTML = d || '';
+
+  // Mostra ícones somente quando ABRIR projeto
+  document.querySelectorAll('.projects ul i').forEach(function(icon){
+    icon.style.display = '';
+  });
+}
+
+
 
 
 
@@ -112,9 +145,9 @@ function updateProjectContent(a, b, d, e) {
         const flagEs = document.querySelector('.flag-es');
         
         const descriptionSection = document.querySelector('.description-text');
-        const descriptionPt = `Sou especialista na <strong>criação de websites</strong>, com ampla experiência em plataformas CMS e desenvolvimento handcoded. Busco sempre fortalecer e aplicar práticas modernas de cultura digital nos projetos em que participo, aprimorando a comunicação voltada para a web. <a href="https://www.linkedin.com/in/renatolopesweb" target="_blank">linkedin.com/in/renatolopesweb <i class="fa-brands fa-linkedin"></i></a>`;
-        const descriptionEn = `I am a specialist in <strong>website creation</strong>, with extensive experience in CMS platforms and handcoded development. I strive to continuously strengthen and apply modern digital culture practices in the projects I participate in, enhancing web‑oriented communication. <a href="https://www.linkedin.com/in/renatolopesweb" target="_blank">linkedin.com/in/renatolopesweb <i class="fa-brands fa-linkedin"></i></a>`;
-        const descriptionEs = `Soy especialista en la <strong>creación de sitios web</strong>, con amplia experiencia en plataformas CMS y desarrollo handcoded. Siempre busco fortalecer y aplicar prácticas modernas de cultura digital en los proyectos en los que participo, mejorando la comunicación orientada a la web. <a href="https://www.linkedin.com/in/renatolopesweb" target="_blank">linkedin.com/in/renatolopesweb <i class="fa-brands fa-linkedin"></i></a>`;
+        const descriptionPt = `Sou especialista em <strong>criação de websites</strong>, com experiência em plataformas CMS e handcoded. Atendo projetos pontuais, o que me permite atuar de forma próxima, aplicando boas práticas de cultura web, com atenção aos detalhes e alto padrão de qualidade nas entregas.<br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
+        const descriptionEn = `I specialize in <strong>website creation</strong>, with experience in CMS platforms and handcoded development. I work on targeted, project based assignments, which allows me to collaborate closely with clients, applying best practices in web culture with attention to detail and a high standard of quality in every delivery. <br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
+        const descriptionEs = `Soy especialista en la <strong>creación de sitios web</strong>, con experiencia en plataformas CMS y desarrollo handcoded. Trabajo en proyectos puntuales, lo que me permite colaborar de manera cercana, aplicando buenas prácticas de cultura web, con atención a los detalles y un alto estándar de calidad en cada entrega. <br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
         
         const ProjectSection = document.querySelector('.project-select');
         const ProjectPt = `Projetos selecionados`;
