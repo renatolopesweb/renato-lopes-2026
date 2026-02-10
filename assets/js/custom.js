@@ -30,6 +30,9 @@ let projects = document.querySelector('.projects');
 let isFirstLoad = true;
 let isAnimating = false;
 
+
+
+
 function openProject(a, b, c, d, e) {
   var shouldClear =
     a == null || a === '' || a === false ||
@@ -39,13 +42,22 @@ function openProject(a, b, c, d, e) {
   isAnimating = true;
 
   if (shouldClear) {
+    // 🔹 Remover .is-active dos <li> da lista quando limpar (clique na imagem)
+    var linksUl = document.querySelector('ul.links'); // seleciona o UL, não o DIV
+    if (linksUl) {
+      linksUl.querySelectorAll('li.is-active').forEach(function(li) {
+        li.classList.remove('is-active');
+      });
+    }
+    // 🔹 Fim do patch
+
     if (!isFirstLoad && projects.classList.contains('show')) {
       projects.classList.add('hide');
 
       setTimeout(function() {
-        clearProjectContent();            
+        clearProjectContent();
         projects.classList.remove('hide');
-        projects.classList.remove('show'); 
+        projects.classList.remove('show');
         isAnimating = false;
       }, 400);
     } else {
@@ -75,6 +87,7 @@ function openProject(a, b, c, d, e) {
     isAnimating = false;
   }
 }
+
 
 function updateProjectContent(a, b, d, e) {
   var projectTitle = document.querySelector('.project-title');
@@ -134,6 +147,14 @@ function updateProjectContent(a, b, c, d) {
 }
 
 
+function openChatt() {
+  const chattContent = document.querySelector('.menu-content');
+  chattContent.classList.toggle('menu-content-toggle');
+
+}
+
+
+
 
 
 
@@ -145,14 +166,19 @@ function updateProjectContent(a, b, c, d) {
         const flagEs = document.querySelector('.flag-es');
         
         const descriptionSection = document.querySelector('.description-text');
-        const descriptionPt = `Sou especialista em <strong>criação de websites</strong>, com experiência em plataformas CMS e handcoded. Atendo projetos pontuais, o que me permite atuar de forma próxima, aplicando boas práticas de cultura web, com atenção aos detalhes e alto padrão de qualidade nas entregas.<br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
-        const descriptionEn = `I specialize in <strong>website creation</strong>, with experience in CMS platforms and handcoded development. I work on targeted, project based assignments, which allows me to collaborate closely with clients, applying best practices in web culture with attention to detail and a high standard of quality in every delivery. <br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
-        const descriptionEs = `Soy especialista en la <strong>creación de sitios web</strong>, con experiencia en plataformas CMS y desarrollo handcoded. Trabajo en proyectos puntuales, lo que me permite colaborar de manera cercana, aplicando buenas prácticas de cultura web, con atención a los detalles y un alto estándar de calidad en cada entrega. <br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
+        const descriptionPt = `Sou especialista em <strong>criação de websites</strong>, com experiência em plataformas CMS e handcoded. Em todos os projetos, priorizo cultura web, atenção aos detalhes e qualidade nas entregas.<br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
+        const descriptionEn = `I specialize in <strong>website creation</strong>, with experience in CMS platforms and handcoded. In every project, I prioritize web culture, attention to detail, and high-quality delivery. <br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
+        const descriptionEs = `Soy especialista en la <strong>creación de sitios web</strong>, con experiencia en plataformas CMS y handcoded. En cada proyecto, priorizo la cultura web, la atención al detalle y la calidad en las entregas. <br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
         
         const ProjectSection = document.querySelector('.project-select');
         const ProjectPt = `Projetos selecionados`;
         const ProjectEn = `Selected projects`;
         const ProjectEs = `Proyectos seleccionados`;
+
+        const LangSection = document.querySelector('.language-title');
+        const LangPt = `Idioma`;
+        const LangEn = `Language`;
+        const LangEs = `Idioma`;
         
         (function () {
             descriptionSection.innerHTML = descriptionPt
@@ -161,16 +187,19 @@ function updateProjectContent(a, b, c, d) {
             e.preventDefault()
             descriptionSection.innerHTML = descriptionPt
             ProjectSection.innerHTML = ProjectPt
+            LangSection.innerHTML = LangPt
         })
         flagEn.addEventListener('click', (e) => {
             e.preventDefault()
             descriptionSection.innerHTML = descriptionEn
             ProjectSection.innerHTML = ProjectEn
+            LangSection.innerHTML = LangEn
         })
         flagEs.addEventListener('click', (e) => {
             e.preventDefault()
             descriptionSection.innerHTML = descriptionEs
             ProjectSection.innerHTML = ProjectEs
+            LangSection.innerHTML = LangEs
         })
 
 //        TRANSLATE END

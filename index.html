@@ -26,11 +26,6 @@
 <body>
     <main>
         <section class="description">
-            <div class="translate">
-            <button class="flag-pt">PT</button> 
-            <button class="flag-en">EN</button>
-            <button class="flag-es">ES</button>
-        </div>
             <figure>
                 <a href="#" onclick="openProject()">
                     <img src="./assets/images/renato-lopes-web.jpg" alt="Renato Lopes Web" class="photo">
@@ -39,18 +34,18 @@
             <div class="about">
                 <span>Webdesigner | Frontend</span>
                 <h1>Renato Lopes</h1>
-                <p class="description-text">Sou especialista em <strong>criação de websites</strong>, com experiência em plataformas CMS e handcoded. Atendo projetos pontuais, o que me permite atuar de forma próxima, aplicando boas práticas de cultura web, com atenção aos detalhes e alto padrão de qualidade nas entregas. <br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a></p>
+                <p class="description-text">Sou especialista em <strong>criação de websites</strong>, com experiência em plataformas CMS e handcoded. Em todos os projetos, priorizo cultura web, atenção aos detalhes e qualidade nas entregas. <br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a></p>
             </div>
             <div class="links">
                 <h2><i class="fa-solid fa-folder-open"></i> <strong class="project-select"> Projetos selecionados</strong>:</h2>
                 <ul class="links">
                     <li>
                        <a href="#project" onclick="openProject(
-                            'AD Comunicação & Marketing (Bilíngue)', 
+                            'AD Comunicação & Marketing', 
                             'Bootstrap ⋮ CSS Custom ⋮ Wordpress CMS ⋮ FTP FileZilla', 
                             'https:\/\/www.adcomunicacao.com.br',
                             '<img src=\'./assets/images/case-1.jpg\' alt=\'Screenshoot Website AD Comunicação & Marketing\' />')">
-                            AD Comunicação & Marketing (Bilíngue)
+                            AD Comunicação & Marketing
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><br><span>Web Site</span>
                         </a>
                     </li>
@@ -91,7 +86,20 @@
             <p class="to-top"><a href="#"><i class="fa-regular fa-rectangle-xmark"></i></a></p>
             </article>
         </section>
+        <div class="menu" onclick="openChatt()"><button><i class="fa-solid fa-bars"></i></button></div>
+        <div class="menu-content">
+            <h3><i class="fa-solid fa-globe"></i> <span class="language-title">Idioma</span></h3>
+                <ul class="translate">
+                    <li>
+                        <button class="flag-pt">PT</button> 
+                        <button class="flag-en">EN</button>
+                        <button class="flag-es">ES</button>
+                    </li>
+                </ul>
+        </div>
     </main>
+
+    
 </body>
 </html>
 <script src="assets/js/custom.js"></script>
