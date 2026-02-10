@@ -292,6 +292,9 @@ figure img{
         border: 2px solid #000;
         border-radius: 2px;
     }
+    .menu i{
+        color: #000;
+    }
     .menu, .menu-content{
         position: absolute;
         top: 1rem;
@@ -299,11 +302,14 @@ figure img{
     }
     .menu-content{
         background: linear-gradient(145deg, #ffffff, #f0f0f0);
-box-shadow:  20px 20px 60px #cbcbcb7d, -20px -20px 60px #fff;
+        box-shadow:  20px 20px 60px #cbcbcb7d, -20px -20px 60px #fff;
         height: fit-content;
         top: -100%;
         width: 100%;
         left: 0;
+}
+    .menu-content a{
+        font-size: 1.2rem;
 }
 .menu-content-toggle{
     top: 0rem;
