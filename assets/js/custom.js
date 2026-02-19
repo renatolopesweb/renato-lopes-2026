@@ -24,36 +24,47 @@
 
 
 
-
-
 let projects = document.querySelector('.projects');
 let isFirstLoad = true;
 let isAnimating = false;
 
-
-
-
+/**
+ * Aceita 4 ou 5 parâmetros:
+ * 4 params: openProject(title, _stackIgnored, url, thumbHTML)
+ * 5 params: openProject(title, _stackIgnored, _, url, thumbHTML)
+ */
 function openProject(a, b, c, d, e) {
+  // Normalização de parâmetros
+  // Se e for undefined, significa que vieram 4 parâmetros => c=url, d=thumb
+  var title, url, thumbHTML;
+  if (typeof e === 'undefined') {
+    title     = a;
+    url       = c;
+    thumbHTML = d;
+  } else {
+    title     = a;
+    url       = d;
+    thumbHTML = e;
+  }
+
   var shouldClear =
-    a == null || a === '' || a === false ||
-    (typeof a === 'string' && a.trim() === '');
+    title == null || title === '' || title === false ||
+    (typeof title === 'string' && title.trim() === '');
 
   if (isAnimating) return;
   isAnimating = true;
 
   if (shouldClear) {
-    // 🔹 Remover .is-active dos <li> da lista quando limpar (clique na imagem)
-    var linksUl = document.querySelector('ul.links'); // seleciona o UL, não o DIV
+    // Remover .is-active dos <li> quando limpar
+    var linksUl = document.querySelector('ul.links');
     if (linksUl) {
       linksUl.querySelectorAll('li.is-active').forEach(function(li) {
         li.classList.remove('is-active');
       });
     }
-    // 🔹 Fim do patch
 
     if (!isFirstLoad && projects.classList.contains('show')) {
       projects.classList.add('hide');
-
       setTimeout(function() {
         clearProjectContent();
         projects.classList.remove('hide');
@@ -70,52 +81,61 @@ function openProject(a, b, c, d, e) {
 
   if (!isFirstLoad) {
     projects.classList.add('hide');
-
     setTimeout(function() {
-      updateProjectContent(a, b, c, d, e);
-
+      updateProjectContent(title, url, thumbHTML); // (title, url, thumb)
       projects.classList.remove('hide');
       projects.classList.add('show');
-
       isAnimating = false;
     }, 400);
-
   } else {
-    updateProjectContent(a, b, c, d, e);
+    updateProjectContent(title, url, thumbHTML); // (title, url, thumb)
     projects.classList.add('show');
     isFirstLoad = false;
     isAnimating = false;
   }
 }
 
-
-function updateProjectContent(a, b, d, e) {
-  var projectTitle = document.querySelector('.project-title');
-  var projectStack = document.querySelector('.project-stack');
-  var projectUrl   = document.querySelector('.project-url');
-  var projectLink  = document.querySelector('.project-link');
-  var projectThumb = document.querySelector('.project-thumb');
-
-  projectTitle.innerHTML  = a;
-  projectStack.innerHTML  = b;
-  projectUrl.innerHTML = d;
-  projectLink.href     = d;
-  projectThumb.innerHTML = e;
-}
-
-
-
-function clearProjectContent() {
-  var t = document.querySelector('.project-title');
-  var s = document.querySelector('.project-stack');
-  var u = document.querySelector('.project-url');
-  var l = document.querySelector('.project-link');
+/**
+ * Atualiza na ordem: thumb -> title -> link (botão fixo .project-link)
+ */
+function updateProjectContent(title, url, thumbHTML) {
+  var t  = document.querySelector('.project-title');
+  var l  = document.querySelector('.project-link');  // <a> "ACESSAR SITE"
   var th = document.querySelector('.project-thumb');
 
-  if (t) t.innerHTML = '';
-  if (s) s.innerHTML = '';
-  if (u) u.innerHTML = '';
-  if (l) l.removeAttribute('href');
+  // 1) Thumb
+  if (th) th.innerHTML = thumbHTML || '';
+
+  // 2) Title
+  if (t) t.innerHTML = title || '';
+
+  // 3) Link do botão fixo
+  if (l) {
+    if (url) {
+      l.setAttribute('href', url);
+      // Se quiser garantir sempre nova aba + segurança:
+      l.setAttribute('target', '_blank');
+      l.setAttribute('rel', 'noopener');
+    } else {
+      l.removeAttribute('href');
+      l.removeAttribute('target');
+      l.removeAttribute('rel');
+    }
+  }
+
+  // Mostra ícones somente quando ABRIR projeto
+  document.querySelectorAll('.projects ul i').forEach(function(icon){
+    icon.style.display = '';
+  });
+}
+
+function clearProjectContent() {
+  var t  = document.querySelector('.project-title');
+  var l  = document.querySelector('.project-link');
+  var th = document.querySelector('.project-thumb');
+
+  if (t)  t.innerHTML = '';
+  if (l)  { l.removeAttribute('href'); l.removeAttribute('target'); l.removeAttribute('rel'); }
   if (th) th.innerHTML = '';
 
   // Esconde ícones somente no CLEAR
@@ -124,27 +144,6 @@ function clearProjectContent() {
   });
 }
 
-function updateProjectContent(a, b, c, d) {
-  var t = document.querySelector('.project-title');
-  var s = document.querySelector('.project-stack');
-  var u = document.querySelector('.project-url');
-  var l = document.querySelector('.project-link');
-  var th = document.querySelector('.project-thumb');
-
-  if (t) t.innerHTML = a || '';
-  if (s) s.innerHTML = b || '';
-  if (u) u.innerHTML = c || '';
-  if (l) {
-    if (c) l.setAttribute('href', c);
-    else l.removeAttribute('href');
-  }
-  if (th) th.innerHTML = d || '';
-
-  // Mostra ícones somente quando ABRIR projeto
-  document.querySelectorAll('.projects ul i').forEach(function(icon){
-    icon.style.display = '';
-  });
-}
 
 
 function openChatt() {
@@ -166,9 +165,9 @@ function openChatt() {
         const flagEs = document.querySelector('.flag-es');
         
         const descriptionSection = document.querySelector('.description-text');
-        const descriptionPt = `Sou especialista em <strong>criação de websites</strong>, com experiência em plataformas CMS e handcoded. Em todos os projetos, priorizo cultura web, atenção aos detalhes e qualidade nas entregas.<br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
-        const descriptionEn = `I specialize in <strong>website creation</strong>, with experience in CMS platforms and handcoded. In every project, I prioritize web culture, attention to detail, and high-quality delivery. <br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
-        const descriptionEs = `Soy especialista en la <strong>creación de sitios web</strong>, con experiencia en plataformas CMS y handcoded. En cada proyecto, priorizo la cultura web, la atención al detalle y la calidad en las entregas. <br><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin.com/in/renatolopesweb</a>`;
+        const descriptionPt = `Especialista na <strong>criação de website</strong> com propósito e centrado no usuário.`;
+        const descriptionEn = `Specialist in <strong>creating purpose websites</strong> centered on the user.`;
+        const descriptionEs = `Especialista en la <strong>creación de sitios web</strong> con propósito y centrados en el usuario.`;
         
         const ProjectSection = document.querySelector('.project-select');
         const ProjectPt = `Projetos selecionados`;
@@ -179,6 +178,12 @@ function openChatt() {
         const LangPt = `Idioma`;
         const LangEn = `Language`;
         const LangEs = `Idioma`;
+
+
+        const LangCta = document.querySelector('.cta-access');
+        const LangCtaPt = `Visitar Website`;
+        const LangCtaEn = `Visit Website`;
+        const LangCtaEs = `Visitar Sitio Web`;
         
         (function () {
             descriptionSection.innerHTML = descriptionPt
@@ -188,18 +193,21 @@ function openChatt() {
             descriptionSection.innerHTML = descriptionPt
             ProjectSection.innerHTML = ProjectPt
             LangSection.innerHTML = LangPt
+            LangCta.innerHTML = LangCtaPt
         })
         flagEn.addEventListener('click', (e) => {
             e.preventDefault()
             descriptionSection.innerHTML = descriptionEn
             ProjectSection.innerHTML = ProjectEn
             LangSection.innerHTML = LangEn
+            LangCta.innerHTML = LangCtaEn
         })
         flagEs.addEventListener('click', (e) => {
             e.preventDefault()
             descriptionSection.innerHTML = descriptionEs
             ProjectSection.innerHTML = ProjectEs
             LangSection.innerHTML = LangEs
+            LangCta.innerHTML = LangCtaEs
         })
 
 //        TRANSLATE END
