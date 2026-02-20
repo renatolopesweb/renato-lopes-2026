@@ -2,6 +2,13 @@
 <html lang="pt">
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EPP33XPZH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-9EPP33XPZH');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,7 +21,8 @@
     <meta property="og:title" content="Renato Lopes" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://www.renatolopesweb.com.br/assets/images/renato-lopes-web.png" />
-    <meta property="og:image:secure_url" content="https://www.renatolopesweb.com.br/assets/images/renato-lopes-web.png" />
+    <meta property="og:image:secure_url"
+        content="https://www.renatolopesweb.com.br/assets/images/renato-lopes-web.png" />
     <meta property="og:site_name" content="Renato Lopes" />
     <meta property="og:description" content="Renato Lopes" />
     <meta name="theme-color" content="#231f20" />
@@ -35,15 +43,19 @@
                 <h1>Renato Lopes</h1>
                 <span>Web Design | Front End | Adobe | Wordpress</span>
                 <div class="copy">
-                <p class="description-text">Especialista na <strong>criação de website</strong> com propósito e centrado no usuário.</p>
-                <div class="cta-section"><a href="" class="btn btn-a"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></div>
+                    <p class="description-text">Especialista na <strong>criação de website</strong> com propósito e
+                        centrado no usuário.</p>
+                    <div class="cta-section"><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"
+                            class="btn btn-a"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></div>
                 </div>
             </div>
             <div class="links">
-                <h2><i class="fa-solid fa-folder-open"></i> <strong class="project-select"> Projetos selecionados</strong>:</h2>
+                <h2><i class="fa-solid fa-folder-open"></i> <strong class="project-select"> Projetos
+                        selecionados</strong>:</h2>
                 <ul class="links">
                     <li>
-                       <a href="#project" onclick="openProject(
+                        <a href="#project"
+                            onclick="openProject(
                             'AD Comunicação & Marketing', 
                             'https:\/\/www.adcomunicacao.com.br',
                             '<img src=\'./assets/images/ad-comunicacao.png\' alt=\'Screenshoot Website AD Comunicação & Marketing\' />')">
@@ -52,7 +64,7 @@
                         </a>
                     </li>
                     <li>
-                            <a href="#project" onclick="openProject(
+                        <a href="#project" onclick="openProject(
                             'Speed Massage', 
                             'https:\/\/www.speedmassage.com.br',
                             '<img src=\'./assets/images/speed-massage.png\' alt=\'Screenshoot Speed Massage\' />')">
@@ -61,7 +73,7 @@
                         </a>
                     </li>
                     <li>
-                            <a href="#project" onclick="openProject(
+                        <a href="#project" onclick="openProject(
                             'Speed Locações', 
                             'https:\/\/www.speedlocacoes.com.br',
                             '<img src=\'./assets/images/speed-locacoes.png\' alt=\'Screenshoot Speed Locações\' />')">
@@ -72,30 +84,33 @@
                 </ul>
             </div>
         </section>
-
         <section class="projects" id="project">
             <article>
-                <div class="project-back"><i class="fa-solid fa-arrow-left" aria-hidden="true" onclick="openProject()"></i></div>
+                <div class="project-back"><i class="fa-solid fa-arrow-left" aria-hidden="true"
+                        onclick="openProject()"></i></div>
                 <div class="project-thumb"></div>
                 <h2 class="project-title"></h2>
-                <div class="cta-section"><a href="" class="btn btn-a project-link"><span class="cta-access">Visitar Website</span> <i class="fa-solid fa-up-right-from-square"></i></a></div>
-            <p class="to-top"><a href="#"><i class="fa-solid fa-arrow-up-long"></i></a></p>
+                <div class="cta-section"><a href="" class="btn btn-a project-link"><span class="cta-access">Visitar
+                            Website</span> <i class="fa-solid fa-up-right-from-square"></i></a></div>
+                <p class="to-top"><a href="#"><i class="fa-solid fa-arrow-up-long"></i></a></p>
             </article>
         </section>
         <div class="menu" onclick="openChatt()"><button><i class="fa-solid fa-bars"></i></button></div>
         <div class="menu-content">
             <h3><i class="fa-solid fa-globe"></i> <span class="language-title">Idioma</span></h3>
-                <ul class="translate">
-                    <li>
-                        <button class="flag-pt"  onclick="openChatt()">PT</button> 
-                        <button class="flag-en"  onclick="openChatt()">EN</button>
-                        <button class="flag-es"  onclick="openChatt()">ES</button>
-                    </li>
-                </ul>
+            <ul class="translate">
+                <li>
+                    <button class="flag-pt" onclick="openChatt()">PT</button>
+                    <button class="flag-en" onclick="openChatt()">EN</button>
+                    <button class="flag-es" onclick="openChatt()">ES</button>
+                </li>
+            </ul>
         </div>
     </main>
 
-    
 </body>
+
 </html>
-<script src="assets/js/custom.js"></script>
+<script>
+    (function(){var e=document.querySelector(".links");if(!e)return;e.addEventListener("click",function(t){var n=t.target.closest("a");if(!n||!e.contains(n))return;"#"===n.getAttribute("href")&&t.preventDefault();var o=n.closest("li");if(!o)return;for(var r=e.querySelectorAll("li.is-active"),c=0;c<r.length;c++)r[c].classList.remove("is-active");o.classList.add("is-active")})})();let projects=document.querySelector(".projects"),isFirstLoad=!0,isAnimating=!1;function openProject(e,t,n,o){var r,c,l;void 0===o?(r=e,c=t,l=n):(r=e,c=n,l=o);var a=null==r||""===r||!1===r||"string"==typeof r&&""===r.trim();if(isAnimating)return;if(isAnimating=!0,a){var i=document.querySelector("ul.links");return i&&i.querySelectorAll("li.is-active").forEach(function(e){e.classList.remove("is-active")}),!isFirstLoad&&projects.classList.contains("show")?(projects.classList.add("hide"),void setTimeout(function(){clearProjectContent(),projects.classList.remove("hide"),projects.classList.remove("show"),isAnimating=!1},400)):(clearProjectContent(),projects.classList.remove("show"),void(isAnimating=!1))}!isFirstLoad?(projects.classList.add("hide"),setTimeout(function(){updateProjectContent(r,c,l),projects.classList.remove("hide"),projects.classList.add("show"),isAnimating=!1},400)):(updateProjectContent(r,c,l),projects.classList.add("show"),isFirstLoad=!1,isAnimating=!1)}function updateProjectContent(e,t,n){var o=document.querySelector(".project-title"),r=document.querySelector(".project-link"),c=document.querySelector(".project-thumb");c&&(c.innerHTML=n||""),o&&(o.innerHTML=e||""),r&&(t?(r.setAttribute("href",t),r.setAttribute("target","_blank"),r.setAttribute("rel","noopener")):(r.removeAttribute("href"),r.removeAttribute("target"),r.removeAttribute("rel"))),document.querySelectorAll(".projects ul i").forEach(function(e){e.style.display=""})}function clearProjectContent(){var e=document.querySelector(".project-title"),t=document.querySelector(".project-link"),n=document.querySelector(".project-thumb");e&&(e.innerHTML=""),t&&(t.removeAttribute("href"),t.removeAttribute("target"),t.removeAttribute("rel")),n&&(n.innerHTML=""),document.querySelectorAll(".projects ul i").forEach(function(e){e.style.display="none"})}function openChatt(){document.querySelector(".menu-content").classList.toggle("menu-content-toggle")}const flagPt=document.querySelector(".flag-pt"),flagEn=document.querySelector(".flag-en"),flagEs=document.querySelector(".flag-es"),descriptionSection=document.querySelector(".description-text"),descriptionPt="Especialista na <strong>criação de website</strong> com propósito e centrado no usuário.",descriptionEn="Specialist in <strong>creating purpose websites</strong> centered on the user.",descriptionEs="Especialista en la <strong>creación de sitios web</strong> con propósito y centrados en el usuario.",ProjectSection=document.querySelector(".project-select"),ProjectPt="Projetos selecionados",ProjectEn="Selected projects",ProjectEs="Proyectos seleccionados",LangSection=document.querySelector(".language-title"),LangPt="Idioma",LangEn="Language",LangEs="Idioma",LangCta=document.querySelector(".cta-access"),LangCtaPt="Visitar Website",LangCtaEn="Visit Website",LangCtaEs="Visitar Sitio Web";!function(){descriptionSection.innerHTML=descriptionPt}(),flagPt.addEventListener("click",e=>{e.preventDefault(),descriptionSection.innerHTML=descriptionPt,ProjectSection.innerHTML=ProjectPt,LangSection.innerHTML=LangPt,LangCta.innerHTML=LangCtaPt}),flagEn.addEventListener("click",e=>{e.preventDefault(),descriptionSection.innerHTML=descriptionEn,ProjectSection.innerHTML=ProjectEn,LangSection.innerHTML=LangEn,LangCta.innerHTML=LangCtaEn}),flagEs.addEventListener("click",e=>{e.preventDefault(),descriptionSection.innerHTML=descriptionEs,ProjectSection.innerHTML=ProjectEs,LangSection.innerHTML=LangEs,LangCta.innerHTML=LangCtaEs});
+</script>
