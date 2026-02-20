@@ -33,7 +33,7 @@ let isAnimating = false;
  * 4 params: openProject(title, _stackIgnored, url, thumbHTML)
  * 5 params: openProject(title, _stackIgnored, _, url, thumbHTML)
  */
-function openProject(a, b, c, d, e) {
+function openProject(a, c, d, e) {
   // Normalização de parâmetros
   // Se e for undefined, significa que vieram 4 parâmetros => c=url, d=thumb
   var title, url, thumbHTML;

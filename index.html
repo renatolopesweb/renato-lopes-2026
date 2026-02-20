@@ -33,7 +33,7 @@
             </figure>
             <div class="about">
                 <h1>Renato Lopes</h1>
-                <span>Web Design | Front End</span>
+                <span>Web Design | Front End | Adobe | Wordpress</span>
                 <div class="copy">
                 <p class="description-text">Especialista na <strong>criação de website</strong> com propósito e centrado no usuário.</p>
                 <div class="cta-section"><a href="" class="btn btn-a"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></div>
@@ -45,7 +45,6 @@
                     <li>
                        <a href="#project" onclick="openProject(
                             'AD Comunicação & Marketing', 
-                            '',
                             'https:\/\/www.adcomunicacao.com.br',
                             '<img src=\'./assets/images/ad-comunicacao.png\' alt=\'Screenshoot Website AD Comunicação & Marketing\' />')">
                             AD Comunicação & Marketing
@@ -53,12 +52,20 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#project" onclick="openProject(
-                            'Machado e Fernandes Associados', 
-                            'Bootstrap ⋮ CSS Custom ⋮ Wordpress CMS ⋮ CPanell', 
-                            'https:\/\/www.machadoefernandes.adv.br',
-                            '<img src=\'./assets/images/machado-e-fernandes.jpg\' alt=\'Machado e Fernandes Associados\' />')">
-                            Machado e Fernandes Associados
+                            <a href="#project" onclick="openProject(
+                            'Speed Massage', 
+                            'https:\/\/www.speedmassage.com.br',
+                            '<img src=\'./assets/images/speed-massage.png\' alt=\'Screenshoot Speed Massage\' />')">
+                            Speed Massage
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><br><span>Web Site</span>
+                        </a>
+                    </li>
+                    <li>
+                            <a href="#project" onclick="openProject(
+                            'Speed Locações', 
+                            'https:\/\/www.speedlocacoes.com.br',
+                            '<img src=\'./assets/images/speed-locacoes.png\' alt=\'Screenshoot Speed Locações\' />')">
+                            Speed Locações
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><br><span>Web Site</span>
                         </a>
                     </li>
@@ -68,6 +75,7 @@
 
         <section class="projects" id="project">
             <article>
+                <div class="project-back"><i class="fa-solid fa-arrow-left" aria-hidden="true" onclick="openProject()"></i></div>
                 <div class="project-thumb"></div>
                 <h2 class="project-title"></h2>
                 <div class="cta-section"><a href="" class="btn btn-a project-link"><span class="cta-access">Visitar Website</span> <i class="fa-solid fa-up-right-from-square"></i></a></div>
@@ -79,9 +87,9 @@
             <h3><i class="fa-solid fa-globe"></i> <span class="language-title">Idioma</span></h3>
                 <ul class="translate">
                     <li>
-                        <button class="flag-pt">PT</button> 
-                        <button class="flag-en">EN</button>
-                        <button class="flag-es">ES</button>
+                        <button class="flag-pt"  onclick="openChatt()">PT</button> 
+                        <button class="flag-en"  onclick="openChatt()">EN</button>
+                        <button class="flag-es"  onclick="openChatt()">ES</button>
                     </li>
                 </ul>
         </div>
