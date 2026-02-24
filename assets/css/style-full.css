@@ -45,20 +45,6 @@ main {
     }
 }
 
-.cta-section {
-    margin: 1rem 0;
-}
-
-.btn-a {
-    background-color: var(--color-gray-7);
-    padding: .7rem 1rem;
-    color: var(--color-gray-1) !important;
-}
-
-.btn-a:hover {
-    background-color: var(--color-gray-6);
-}
-
 .description {
     background: #f9f9f9;
     min-height: 100vh;
@@ -99,7 +85,11 @@ figure img {
     filter: grayscale(1);
     width: 100px;
 }
-
+@media (max-width: 992px) {
+    figure img{
+        filter: grayscale(0);
+    }
+}
 figure img:hover {
     filter: grayscale(0);
 }
@@ -137,7 +127,7 @@ figure img:hover {
 .links h2 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .links ul {
@@ -260,25 +250,9 @@ figure img:hover {
     padding-bottom: 1rem;
     margin-bottom: 2rem;
 }
-
-.projects article ul {
-    list-style-type: none;
+.projects a{
+    padding: .7rem 1rem;
 }
-
-.projects article li {
-    margin-top: 1rem;
-}
-
-.projects article i {
-    font-size: 1rem;
-    text-align: left;
-    width: 25px;
-}
-
-.projects article li a {
-    color: var(--color-blue-1);
-}
-
 .to-top {
     color: var(--color-gray-7) !important;
     display: none;
@@ -356,7 +330,7 @@ figure img:hover {
 
 .menu-content ul {
     list-style-type: none;
-    /* margin-bottom: 2rem; */
+    margin-bottom: 1rem;
 }
 
 .menu-content li {
@@ -364,18 +338,16 @@ figure img:hover {
     /* margin: .5rem 0; */
 }
 
-.menu-content li a {
-    color: var(--color-blue-1);
-}
-
-.translate button {
+.translate button, .btn-a {
     border: 0;
-    color: var(--color-blue-1);
     cursor: pointer;
     margin-right: .5rem;
     background-color: var(--color-gray-7);
     color: var(--color-gray-1);
     padding: .3rem .6rem;
+}
+.translate button:hover, .btn-a:hover {
+    background-color: var(--color-gray-6);
 }
 
 @media (max-width: 992px) {
@@ -398,10 +370,12 @@ figure img:hover {
     }
 
     .menu-content h3,
-    .menu-content button {
+    .menu-content button, .menu-content a {
         font-size: 1.1rem;
     }
-
+.menu-content ul {
+    margin-bottom: 2rem;
+}
     .menu-content-toggle {
         top: 0rem;
     }

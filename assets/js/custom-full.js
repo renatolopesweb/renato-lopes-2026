@@ -133,9 +133,9 @@ const flagEn = document.querySelector('.flag-en');
 const flagEs = document.querySelector('.flag-es');
 
 const descriptionSection = document.querySelector('.description-text');
-const descriptionPt = `Especialista na <strong>criação de website</strong> com propósito e centrado no usuário.`;
-const descriptionEn = `Specialist in <strong>creating purpose websites</strong> centered on the user.`;
-const descriptionEs = `Especialista en la <strong>creación de sitios web</strong> con propósito y centrados en el usuario.`;
+const descriptionPt = `Especialista em <strong>criação de websites</strong> com propósito, centrados no usuário e sob medida para pessoas e empresas que valorizam uma presença digital profissional.`;
+const descriptionEn = `Specialist in <strong>creating purposeful, user-centered websites</strong> tailored for individuals and businesses that value a professional digital presence.`;
+const descriptionEs = `Especialista en la <strong>creación de sitios web</strong> con propósito, centrados en el usuario y hechos a medida para personas y empresas que valoran una presencia digital profesional.`;
 
 const ProjectSection = document.querySelector('.project-select');
 const ProjectPt = `Projetos selecionados`;
@@ -146,6 +146,11 @@ const LangSection = document.querySelector('.language-title');
 const LangPt = `Idioma`;
 const LangEn = `Language`;
 const LangEs = `Idioma`;
+
+const LangContact = document.querySelector('.language-contact');
+const LangContactPt = `Contato`;
+const LangContactEn = `Contact`;
+const LangContactEs = `Contato`;
 
 const LangCta = document.querySelector('.cta-access');
 const LangCtaPt = `Visitar Website`;
@@ -159,6 +164,7 @@ flagPt.addEventListener('click', (e) => {
   e.preventDefault();
   descriptionSection.innerHTML = descriptionPt;
   ProjectSection.innerHTML = ProjectPt;
+  LangContact.innerHTML = LangContactPt;
   LangSection.innerHTML = LangPt;
   LangCta.innerHTML = LangCtaPt;
 });
@@ -167,12 +173,14 @@ flagEn.addEventListener('click', (e) => {
   descriptionSection.innerHTML = descriptionEn;
   ProjectSection.innerHTML = ProjectEn;
   LangSection.innerHTML = LangEn;
+  LangContact.innerHTML = LangContactEn;
   LangCta.innerHTML = LangCtaEn;
 });
 flagEs.addEventListener('click', (e) => {
   e.preventDefault();
   descriptionSection.innerHTML = descriptionEs;
   ProjectSection.innerHTML = ProjectEs;
+  LangContact.innerHTML = LangContactEs;
   LangSection.innerHTML = LangEs;
   LangCta.innerHTML = LangCtaEs;
 });
