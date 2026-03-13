@@ -207,12 +207,9 @@ figure img {
         max-height: 50vh;
     }
     main{
-        padding-bottom: 3rem;
+        padding-bottom: 5rem;
     }
 }
-
-
-
 
 .project-texts {
     background-color: rgba(239, 240, 245, 0.935);
