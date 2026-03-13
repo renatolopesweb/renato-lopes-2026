@@ -95,6 +95,12 @@ main {
     max-width: 800px;
     padding: 0 1rem;
 }
+@media (max-width: 992px) {
+    .description {
+    align-content: flex-start;
+    padding-top: 1rem;
+}
+}
 
 .description p {
     color: var(--color-black);
