@@ -42,14 +42,13 @@ nav {
     position: absolute;
     position: fixed;
     top: 1rem;
-    left: 1rem;
+    left: 1.3rem;
     list-style-type: none;
     z-index: 1;
 }
-
 nav li {
     display: inline-block;
-    margin-left: .5rem;
+    margin-right: 1rem;
 }
 
 nav button {
@@ -75,6 +74,7 @@ nav button {
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.57);
         font-size: 1.3rem;
         font-weight: bold;
+        text-shadow: 1px 1px 1px #e2e2e2;
     }
 
     nav li {
@@ -105,6 +105,7 @@ main {
 .description p {
     color: var(--color-black);
     font-size: 1.1rem;
+    text-shadow: 1px 1px 1px #e2e2e2;
     line-height: 2.3;
     margin-top: 1rem;
 }
@@ -129,6 +130,7 @@ figure img {
 
 .description li {
     margin-top: 1rem;
+    text-shadow: 1px 1px 1px #e2e2e2;
 }
 
 .description li i {
@@ -231,6 +233,7 @@ figure img {
     margin: 0;
     margin-bottom: .6rem;
     padding: 0;
+    text-shadow: 1px 1px 1px #d5d5d5;
 }
 
 .btn {
