@@ -31,88 +31,63 @@
 
 <body>
     <main>
+        <nav>
+            <ul>
+                <li><button class="flag-pt">PT</button></li>
+                <li><button class="flag-en">EN</button></li>
+                <li><button class="flag-es">ES</button></li>
+            </ul>
+        </nav>
         <section class="description">
             <figure>
-                <a href="#" onclick="openProject()">
-                    <img src="./assets/images/renato-lopes-web.jpg" alt="Renato Lopes Web" class="photo">
-                </a>
+                <img src="./assets/images/renato-lopes-web.png" alt="Renato Lopes Web">
             </figure>
             <div class="about">
-                <h1>Renato Lopes</h1>
-                <span>Web Design | Front End</span>
                 <div class="copy">
-                    <p class="description-text">Especialista em <strong>criação de websites</strong> com propósito, centrados no usuário e sob medida para pessoas e empresas que valorizam uma presença digital profissional.</p>
+                    <p class="description-text">Olá, sou o <strong class="text-blue">Renato Lopes</strong>, especialista na criação de websites usando tecnologias de CMS como Adobe Experience Manager (AEM), WordPress, Drupal e handcoded (HTML, CSS, JS). Também atuo com globalização de páginas web para projetos de pequena e grande escala.</p>
+                    <h2 class="language-contact">Contato</h2>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin/renato_lopes_web</a></li>
+                        <li><a href="https://www.instagram.com/renato_lopes_web" target="_blank"><i class="fa-brands fa-square-instagram"></i> Instagram/renato_lopes_web</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="links">
-                <h2><i class="fa-solid fa-folder-open"></i> <strong class="project-select"> Projetos
-                        selecionados</strong>:</h2>
-                <ul class="links">
-                    <li>
-                        <a href="#project"
-                            onclick="openProject(
-                            'AD Comunicação & Marketing', 
-                            'https:\/\/www.adcomunicacao.com.br',
-                            '<img src=\'./assets/images/ad-comunicacao.png\' alt=\'Screenshoot Website AD Comunicação & Marketing\' />')">
-                            AD Comunicação & Marketing
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><br><span>Web Site</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project" onclick="openProject(
-                            'Speed Massage', 
-                            'https:\/\/www.speedmassage.com.br',
-                            '<img src=\'./assets/images/speed-massage.png\' alt=\'Screenshoot Speed Massage\' />')">
-                            Speed Massage
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><br><span>Web Site</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#project" onclick="openProject(
-                            'Speed Locações', 
-                            'https:\/\/www.speedlocacoes.com.br',
-                            '<img src=\'./assets/images/speed-locacoes.png\' alt=\'Screenshoot Speed Locações\' />')">
-                            Speed Locações
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><br><span>Web Site</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </section>
-        <section class="projects" id="project">
-            <article>
-                <div class="project-back" style="cursor: pointer;"><i class="fa-solid fa-arrow-left" aria-hidden="true"
-                        onclick="openProject()"></i></div>
-                <div class="project-thumb"></div>
-                <h2 class="project-title"></h2>
-                <div class="cta-section"><a href="" class="btn btn-a project-link"><span class="cta-access">Visitar
-                            Website</span> <i class="fa-solid fa-up-right-from-square"></i></a></div>
-                <p class="to-top"><a href="#" onclick="openProject()"><i class="fa-solid fa-arrow-up-long"></i></a></p>
-            </article>
-        </section>
-        <div class="menu" onclick="openChatt()"><button><i class="fa-solid fa-bars"></i></button></div>
-        <div class="menu-content">
-            <h3><i class="fa-solid fa-globe"></i> <span class="language-title">Idioma</span></h3>
-            <ul class="translate">
-                <li>
-                    <button class="flag-pt" onclick="openChatt()">PT</button>
-                    <button class="flag-en" onclick="openChatt()">EN</button>
-                    <button class="flag-es" onclick="openChatt()">ES</button>
-                </li>
-            </ul>
-            <h3><i class="fa-regular fa-comment-dots"></i> <span class="language-contact">Contato</span></h3>
-            <ul>
-                <li>
-                    <a href="https://www.linkedin.com/in/renatolopesweb" target="_blank"
-                            class="btn btn-a"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a>
-                </li>
-            </ul>
-        </div>
     </main>
+
+    <section class="project project-a">
+        <div class="project-texts project-a-description">
+            <h3>AD Comunicação & Marketing</h3>
+            <p><a href="https://adcomunicacao.com.br" target="_blank" class="btn btn-primary"><span class="cta-access">Visitar Website</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+        </div>
+        <div class="project-screenshot project-a-screenshot">
+            <img src="./assets/images/cases/ad-comunicacao.png" alt="AD Comunicação">
+        </div>
+    </section>
+
+    <section class="project project-b">
+        <div class="project-texts project-b-description">
+            <h3>Speed Locações</h3>
+            <p><a href="https://www.speedlocacoes.com.br" target="_blank" class="btn btn-primary"><span class="cta-access">Visitar Website</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+        </div>
+        <div class="project-screenshot project-b-screenshot">
+            <img src="./assets/images/cases/speed-locacoes.png" alt="Speed Locações">
+        </div>
+    </section>
+
+    
+    <section class="project project-a">
+        <div class="project-texts project-a-description">
+            <h3>Speed Massage</h3>
+            <p><a href="https://speedmassage.com.br" target="_blank" class="btn btn-primary"><span class="cta-access">Visitar Website</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+        </div>
+        <div class="project-screenshot project-a-screenshot">
+            <img src="./assets/images/cases/speed-massage.png" alt="Speed Massage">
+        </div>
+    </section>
 
 </body>
 
 </html>
-<script>
-(function(){var linksList=document.querySelector('.links');if(!linksList)return;linksList.addEventListener('click',function(evt){var anchor=evt.target.closest('a');if(!anchor||!linksList.contains(anchor))return;if(anchor.getAttribute('href')==='#'){evt.preventDefault();}var item=anchor.closest('li');if(!item)return;var items=linksList.querySelectorAll('li.is-active');for(var i=0;i<items.length;i++){items[i].classList.remove('is-active');}item.classList.add('is-active');});})();let projects=document.querySelector('.projects');let isFirstLoad=true;let isAnimating=false;function openProject(a,c,d,e){var title,url,thumbHTML;if(typeof e==='undefined'){title=a;url=c;thumbHTML=d;}else{title=a;url=d;thumbHTML=e;}var shouldClear=title==null||title===''||title===false||(typeof title==='string'&&title.trim()==='');if(isAnimating)return;isAnimating=true;if(shouldClear){var linksUl=document.querySelector('ul.links');if(linksUl){linksUl.querySelectorAll('li.is-active').forEach(function(li){li.classList.remove('is-active');});}if(!isFirstLoad&&projects.classList.contains('show')){projects.classList.add('hide');setTimeout(function(){clearProjectContent();projects.classList.remove('hide');projects.classList.remove('show');isAnimating=false;},400);}else{clearProjectContent();projects.classList.remove('show');isAnimating=false;}return;}if(!isFirstLoad){projects.classList.add('hide');setTimeout(function(){updateProjectContent(title,url,thumbHTML);projects.classList.remove('hide');projects.classList.add('show');isAnimating=false;},400);}else{updateProjectContent(title,url,thumbHTML);projects.classList.add('show');isFirstLoad=false;isAnimating=false;}}function updateProjectContent(title,url,thumbHTML){var t=document.querySelector('.project-title');var l=document.querySelector('.project-link');var th=document.querySelector('.project-thumb');if(th)th.innerHTML=thumbHTML||'';if(t)t.innerHTML=title||'';if(l){if(url){l.setAttribute('href',url);l.setAttribute('target','_blank');l.setAttribute('rel','noopener');}else{l.removeAttribute('href');l.removeAttribute('target');l.removeAttribute('rel');}}document.querySelectorAll('.projects ul i').forEach(function(icon){icon.style.display='';});}function clearProjectContent(){var t=document.querySelector('.project-title');var l=document.querySelector('.project-link');var th=document.querySelector('.project-thumb');if(t)t.innerHTML='';if(l){l.removeAttribute('href');l.removeAttribute('target');l.removeAttribute('rel');}if(th)th.innerHTML='';document.querySelectorAll('.projects ul i').forEach(function(icon){icon.style.display='none';});}function openChatt(){const chattContent=document.querySelector('.menu-content');chattContent.classList.toggle('menu-content-toggle');}const flagPt=document.querySelector('.flag-pt');const flagEn=document.querySelector('.flag-en');const flagEs=document.querySelector('.flag-es');const descriptionSection=document.querySelector('.description-text');const descriptionPt=`Especialista em <strong>criação de websites</strong> com propósito, centrados no usuário e sob medida para pessoas e empresas que valorizam uma presença digital profissional.`;const descriptionEn=`Specialist in <strong>creating purposeful, user-centered websites</strong> tailored for individuals and businesses that value a professional digital presence.`;const descriptionEs=`Especialista en la <strong>creación de sitios web</strong> con propósito, centrados en el usuario y hechos a medida para personas y empresas que valoran una presencia digital profesional.`;const ProjectSection=document.querySelector('.project-select');const ProjectPt=`Projetos selecionados`;const ProjectEn=`Selected projects`;const ProjectEs=`Proyectos seleccionados`;const LangSection=document.querySelector('.language-title');const LangPt=`Idioma`;const LangEn=`Language`;const LangEs=`Idioma`;const LangContact=document.querySelector('.language-contact');const LangContactPt=`Contato`;const LangContactEn=`Contact`;const LangContactEs=`Contato`;const LangCta=document.querySelector('.cta-access');const LangCtaPt=`Visitar Website`;const LangCtaEn=`Visit Website`;const LangCtaEs=`Visitar Sitio Web`; (function(){descriptionSection.innerHTML=descriptionPt;})();flagPt.addEventListener('click',(e)=>{e.preventDefault();descriptionSection.innerHTML=descriptionPt;ProjectSection.innerHTML=ProjectPt;LangContact.innerHTML=LangContactPt;LangSection.innerHTML=LangPt;LangCta.innerHTML=LangCtaPt;});flagEn.addEventListener('click',(e)=>{e.preventDefault();descriptionSection.innerHTML=descriptionEn;ProjectSection.innerHTML=ProjectEn;LangSection.innerHTML=LangEn;LangContact.innerHTML=LangContactEn;LangCta.innerHTML=LangCtaEn;});flagEs.addEventListener('click',(e)=>{e.preventDefault();descriptionSection.innerHTML=descriptionEs;ProjectSection.innerHTML=ProjectEs;LangContact.innerHTML=LangContactEs;LangSection.innerHTML=LangEs;LangCta.innerHTML=LangCtaEs;});
+<script src="./assets/js/custom.js">
 </script>

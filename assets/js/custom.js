@@ -1,1 +1,40 @@
-(function(){var e=document.querySelector(".links");if(!e)return;e.addEventListener("click",function(t){var n=t.target.closest("a");if(!n||!e.contains(n))return;"#"===n.getAttribute("href")&&t.preventDefault();var o=n.closest("li");if(!o)return;for(var r=e.querySelectorAll("li.is-active"),c=0;c<r.length;c++)r[c].classList.remove("is-active");o.classList.add("is-active")})})();let projects=document.querySelector(".projects"),isFirstLoad=!0,isAnimating=!1;function openProject(e,t,n,o){var r,c,l;void 0===o?(r=e,c=t,l=n):(r=e,c=n,l=o);var a=null==r||""===r||!1===r||"string"==typeof r&&""===r.trim();if(isAnimating)return;if(isAnimating=!0,a){var i=document.querySelector("ul.links");return i&&i.querySelectorAll("li.is-active").forEach(function(e){e.classList.remove("is-active")}),!isFirstLoad&&projects.classList.contains("show")?(projects.classList.add("hide"),void setTimeout(function(){clearProjectContent(),projects.classList.remove("hide"),projects.classList.remove("show"),isAnimating=!1},400)):(clearProjectContent(),projects.classList.remove("show"),void(isAnimating=!1))}!isFirstLoad?(projects.classList.add("hide"),setTimeout(function(){updateProjectContent(r,c,l),projects.classList.remove("hide"),projects.classList.add("show"),isAnimating=!1},400)):(updateProjectContent(r,c,l),projects.classList.add("show"),isFirstLoad=!1,isAnimating=!1)}function updateProjectContent(e,t,n){var o=document.querySelector(".project-title"),r=document.querySelector(".project-link"),c=document.querySelector(".project-thumb");c&&(c.innerHTML=n||""),o&&(o.innerHTML=e||""),r&&(t?(r.setAttribute("href",t),r.setAttribute("target","_blank"),r.setAttribute("rel","noopener")):(r.removeAttribute("href"),r.removeAttribute("target"),r.removeAttribute("rel"))),document.querySelectorAll(".projects ul i").forEach(function(e){e.style.display=""})}function clearProjectContent(){var e=document.querySelector(".project-title"),t=document.querySelector(".project-link"),n=document.querySelector(".project-thumb");e&&(e.innerHTML=""),t&&(t.removeAttribute("href"),t.removeAttribute("target"),t.removeAttribute("rel")),n&&(n.innerHTML=""),document.querySelectorAll(".projects ul i").forEach(function(e){e.style.display="none"})}function openChatt(){document.querySelector(".menu-content").classList.toggle("menu-content-toggle")}const flagPt=document.querySelector(".flag-pt"),flagEn=document.querySelector(".flag-en"),flagEs=document.querySelector(".flag-es"),descriptionSection=document.querySelector(".description-text"),descriptionPt="Especialista na <strong>criação de website</strong> com propósito e centrado no usuário.",descriptionEn="Specialist in <strong>creating purpose websites</strong> centered on the user.",descriptionEs="Especialista en la <strong>creación de sitios web</strong> con propósito y centrados en el usuario.",ProjectSection=document.querySelector(".project-select"),ProjectPt="Projetos selecionados",ProjectEn="Selected projects",ProjectEs="Proyectos seleccionados",LangSection=document.querySelector(".language-title"),LangPt="Idioma",LangEn="Language",LangEs="Idioma",LangCta=document.querySelector(".cta-access"),LangCtaPt="Visitar Website",LangCtaEn="Visit Website",LangCtaEs="Visitar Sitio Web";!function(){descriptionSection.innerHTML=descriptionPt}(),flagPt.addEventListener("click",e=>{e.preventDefault(),descriptionSection.innerHTML=descriptionPt,ProjectSection.innerHTML=ProjectPt,LangSection.innerHTML=LangPt,LangCta.innerHTML=LangCtaPt}),flagEn.addEventListener("click",e=>{e.preventDefault(),descriptionSection.innerHTML=descriptionEn,ProjectSection.innerHTML=ProjectEn,LangSection.innerHTML=LangEn,LangCta.innerHTML=LangCtaEn}),flagEs.addEventListener("click",e=>{e.preventDefault(),descriptionSection.innerHTML=descriptionEs,ProjectSection.innerHTML=ProjectEs,LangSection.innerHTML=LangEs,LangCta.innerHTML=LangCtaEs});
+const flagPt = document.querySelector('.flag-pt');
+const flagEn = document.querySelector('.flag-en');
+const flagEs = document.querySelector('.flag-es');
+
+const descriptionSection = document.querySelector('.description-text');
+const descriptionPt = `Olá, sou o <strong class="text-blue">Renato Lopes</strong>, especialista na criação de websites usando tecnologias de CMS como Adobe Experience Manager (AEM), WordPress, Drupal e handcoded (HTML, CSS, JS). Também atuo com globalização de páginas web para projetos de pequena e grande escala.`;
+const descriptionEn = `Hello, I'm <strong class="text-blue">Renato Lopes</strong>, a specialist in website development using CMS technologies such as Adobe Experience Manager (AEM), WordPress, Drupal, and handcoded (HTML, CSS, JS). I also work with web page globalization, leading projects at both small and large scale.`;
+const descriptionEs = `Hola, soy <strong class="text-blue">Renato Lopes</strong>, especialista en la creación de sitios web usando tecnologías de CMS como Adobe Experience Manager (AEM), WordPress, Drupal y handcoded (HTML, CSS, JS). También trabajo con globalización de páginas web en pequeña y gran escala.`;
+
+const LangContact = document.querySelector('.language-contact');
+const LangContactPt = `Contato`;
+const LangContactEn = `Contact`;
+const LangContactEs = `Contato`;
+
+const LangCta = document.querySelectorAll('.cta-access');
+const LangCtaPt = `Visitar Website`;
+const LangCtaEn = `Visit Website`;
+const LangCtaEs = `Visitar Sitio Web`;
+
+(function () {
+  descriptionSection.innerHTML = descriptionPt;
+})();
+flagPt.addEventListener('click', (e) => {
+  e.preventDefault();
+  descriptionSection.innerHTML = descriptionPt;
+  LangContact.innerHTML = LangContactPt;
+  LangCta.forEach(el => el.innerHTML = LangCtaPt);
+});
+flagEn.addEventListener('click', (e) => {
+  e.preventDefault();
+  descriptionSection.innerHTML = descriptionEn;
+  LangContact.innerHTML = LangContactEn;
+  LangCta.forEach(el => el.innerHTML = LangCtaEn);
+});
+flagEs.addEventListener('click', (e) => {
+  e.preventDefault();
+  descriptionSection.innerHTML = descriptionEs;
+  LangContact.innerHTML = LangContactEs;
+  LangCta.forEach(el => el.innerHTML = LangCtaEs);
+});
