@@ -57,6 +57,9 @@ nav button {
     cursor: pointer;
     font-size: .9rem;
 }
+.to-top{
+    display: none;
+}
 
 @media (max-width: 992px) {
     nav {
@@ -75,6 +78,9 @@ nav button {
     }
     nav button {
     font-size: 1.2rem;
+}
+.to-top{
+    display: contents;
 }
 }
 .description {
