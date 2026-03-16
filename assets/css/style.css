@@ -3,13 +3,11 @@
 
 :root {
     --color-black: #32323e;
-    --color-white-1: #f5f5f5;
-    --color-white-2: #fff;
     --color-blue-1: #135ece;
     --color-blue-2: #0c3e87;
     --color-blue-3: #08316f;
-    --color-gray-1: #FAFAFA;
-    --color-gray-2: #e6e6e6;
+    --color-gray-1: #F6F6FA;
+    --color-gray-2: #fff;
     --color-gray-3: #BFBFBF;
     --color-gray-4: #A0A0A0;
     --color-gray-5: #808080;
@@ -33,7 +31,9 @@ body {
     font-size: 1rem;
     scroll-behavior: smooth;
 }
-
+main {
+    background-color: var(--color-gray-1);
+}
 .text-blue {
     color: var(--color-blue-1);
 }
@@ -60,7 +60,7 @@ nav button {
 
 @media (max-width: 992px) {
     nav {
-        background-color: var(--color-white-2);
+        background-color: #fff;
         bottom: 0;
         left: 0;
         padding: 1.9rem 0;
@@ -74,11 +74,6 @@ nav button {
         margin-right: .7rem;
     }
 }
-
-main {
-    background-color: rgba(239, 240, 245, 0.618);
-}
-
 .description {
     align-content: center;
     display: grid;
@@ -97,7 +92,6 @@ main {
 .description p {
     color: var(--color-black);
     font-size: 1.1rem;
-    text-shadow: 1px 1px 1px #e2e2e2;
     line-height: 2.3;
     margin-top: 1rem;
 }
@@ -107,22 +101,32 @@ figure {
     height: 120px;
     width: 120px;
     border-radius: 500px;
+    position: relative;
 }
 
 figure img {
-    border: 1px solid var(--color-blue-1);
     border-radius: 500px;
-    height: 120px;
     filter: grayscale(1);
+    height: 120px;
+    opacity: .9;
 }
-
+figure::after {
+    content: '';
+    background-color: #18c618;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    bottom: 0;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: 12px;
+}
 .description ul {
     list-style-type: none;
 }
 
 .description li {
     margin-top: 1rem;
-    text-shadow: 1px 1px 1px #e2e2e2;
 }
 
 .description li i {
@@ -143,7 +147,9 @@ figure img {
     font-size: 1.1rem;
     margin-top: 1rem;
 }
-
+.project{
+    background-image: linear-gradient(to bottom, #fcfcfe, #F6F6FA);
+}
 .project-a {
     display: grid;
     grid-template:
@@ -212,7 +218,6 @@ figure img {
 }
 
 .project-texts {
-    background-color: rgba(239, 240, 245, 0.935);
     text-align: center;
 }
 
@@ -264,11 +269,11 @@ figure img {
 
 .btn:active {
     background-image: linear-gradient(to bottom, #fff, #b1b3b7);
+    transform: translateY(3px);
 }
 
 
 .project-screenshot {
-    background-image: linear-gradient(to bottom, #fcfcfe, #faf9fd);
     padding: 0 .5rem;
 }
 @media (max-width: 992px) {}
