@@ -7,8 +7,8 @@
     --color-blue-2: #0c3e87;
     --color-blue-3: #08316f;
     --color-gray-1: #F6F6FA;
-    --color-gray-2: #fff;
-    --color-gray-3: #BFBFBF;
+    --color-gray-2: #d0d3dd;
+    --color-gray-3: #b5b9c9;
     --color-gray-4: #A0A0A0;
     --color-gray-5: #808080;
     --color-gray-6: #404040;
@@ -23,11 +23,11 @@
     padding: 0px;
     text-decoration: none;
     transition: .3s;
-    color: var(--color-black);
 }
 
 html,
 body {
+    color: var(--color-black);
     font-size: 1rem;
     scroll-behavior: smooth;
 }
@@ -95,6 +95,7 @@ nav button {
     .description {
     align-content: flex-start;
     padding-top: 1rem;
+    min-height: auto;
 }
 }
 
@@ -157,7 +158,7 @@ figure::after {
     margin-top: 1rem;
 }
 .project{
-    background-image: linear-gradient(to bottom, #fcfcfe, #F6F6FA);
+    background-image: linear-gradient(to bottom, var(--color-gray-1), var(--color-gray-2));
 }
 .project-a {
     display: grid;
@@ -166,7 +167,24 @@ figure::after {
     ;
     grid-template-columns: 1fr 1fr;
 }
-
+.text-project{
+    background-image: linear-gradient(to bottom, var(--color-gray-1), var(--color-gray-3));
+    font-size: 2.5rem;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+    color: var(--color-black);
+}
+@media (max-width: 992px) {
+    .text-project{
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+}
+h3{
+    width: 100%;
+}
 .project-a-description {
     grid-area: description-a;
 }
@@ -243,7 +261,7 @@ figure::after {
 }
 
 .btn {
-    background-image: linear-gradient(to bottom, #fff, #C6C9CE);
+    background-image: linear-gradient(to bottom, #fff, var(--color-gray-3));
     border: 1px solid #e8e8e8;
     border-radius: .8rem;
     color: var(--color-gray-6);
