@@ -9,7 +9,7 @@
     --color-gray-1: #F6F6FA;
     --color-gray-2: #d0d3dd;
     --color-gray-3: #b5b9c9;
-    --color-gray-4: #A0A0A0;
+    --color-gray-4: #5d5d73;
     --color-gray-5: #808080;
     --color-gray-6: #404040;
     --color-gray-7: #1A1A1A;
@@ -173,7 +173,7 @@ figure::after {
     padding: 2rem 0;
     text-align: center;
     width: 100%;
-    color: var(--color-black);
+    color: var(--color-gray-4);
 }
 @media (max-width: 992px) {
     .text-project{
