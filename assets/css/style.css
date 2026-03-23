@@ -50,6 +50,9 @@ nav li {
     display: inline-block;
     margin-right: 1rem;
 }
+nav li a, nav li button{
+    color: var(--color-black);
+}
 
 nav button {
     background-color: transparent;
@@ -177,10 +180,24 @@ figure::after {
 }
 @media (max-width: 992px) {
     .text-project{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 2rem;
-    padding: 1rem 0;
+    padding: .7rem 0;
 }
+
+@media (prefers-color-scheme: dark) {
+    figure {
+        background-image: linear-gradient(
+            to bottom,
+            var(--color-gray-7),
+            var(--color-gray-6)
+        );
+    }
+    figure img {
+    filter: grayscale(0);
+}
+}
+
 }
 h3{
     width: 100%;
