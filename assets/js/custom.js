@@ -4,7 +4,7 @@ const flagEs = document.querySelector('.flag-es');
 
 const descriptionSection = document.querySelector('.description-text');
 const descriptionPt = `Olá, sou o <strong class="text-blue">Renato Lopes</strong>, especialista na criação de <strong>websites</strong> usando tecnologias de CMS como Adobe Experience Manager (AEM), WordPress, Drupal ou handcoded (HTML, CSS, JS).`;
-const descriptionEn = `Hello, I'm <strong class="text-blue">Renato Lopes</strong>, a specialist in <strong>websites</strong>development using CMS technologies such as Adobe Experience Manager (AEM), WordPress, Drupal or handcoded (HTML, CSS, JS).`;
+const descriptionEn = `Hello, I'm <strong class="text-blue">Renato Lopes</strong>, a specialist in <strong>websites</strong> development using CMS technologies such as Adobe Experience Manager (AEM), WordPress, Drupal or handcoded (HTML, CSS, JS).`;
 const descriptionEs = `Hola, soy <strong class="text-blue">Renato Lopes</strong>, especialista en la creación de <strong>sitios web</strong> usando tecnologías de CMS como Adobe Experience Manager (AEM), WordPress, Drupal o handcoded (HTML, CSS, JS).`;
 
 const LangContact = document.querySelector('.language-contact');
