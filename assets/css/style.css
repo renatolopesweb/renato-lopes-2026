@@ -127,6 +127,7 @@ figure {
 
 figure img {
     border-radius: 500px;
+    filter: brightness(1.2);
     height: 150px;
     opacity: .9;
 }
