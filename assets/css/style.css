@@ -281,6 +281,7 @@ h3{
 }
 
 .project-screenshot img {
+    cursor: row-resize;
     width: 100%;
 }
 
