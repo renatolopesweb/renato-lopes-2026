@@ -326,7 +326,6 @@ h3{
 }
 
 .btn:active {
-    background-image: linear-gradient(to bottom, #fff, #b1b3b7);
     transform: translateY(3px);
 }
 
