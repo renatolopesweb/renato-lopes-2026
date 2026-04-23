@@ -198,19 +198,6 @@ figure::after {
     padding: .7rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-    figure {
-        background-image: linear-gradient(
-            to bottom,
-            var(--color-gray-7),
-            var(--color-gray-6)
-        );
-    }
-    figure img {
-    filter: grayscale(0);
-}
-}
-
 }
 h3{
     width: 100%;
