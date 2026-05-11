@@ -127,6 +127,7 @@ figure {
 figure img {
     border-radius: 500px;
     filter: brightness(1.1);
+    filter: grayscale(1);
     height: 150px;
 }
 figure::after {
@@ -159,13 +160,13 @@ figure::after {
     font-size: 1.3rem;
 }
 
-.description li a:hover {
-    text-decoration: underline;
-}
-
 .description h2 {
     font-size: 1.3rem;
     margin-top: 1.5rem;
+}
+.description li i {
+    width: 30px;
+    text-align: left;
 }
 
 @media (max-width: 992px) {
@@ -201,6 +202,13 @@ figure::after {
 }
 h3{
     width: 100%;
+}
+
+.all-projects{
+    display: none;
+}
+.all-projects.is-visible {
+  display: block;
 }
 .project-a-description {
     grid-area: description-a;
