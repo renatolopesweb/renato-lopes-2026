@@ -94,7 +94,7 @@ nav button {
     display: grid;
     margin: auto;
     min-height: 100vh;
-    max-width: 800px;
+    max-width: 700px;
     padding: 0 1rem;
 }
 
@@ -118,8 +118,8 @@ nav button {
 figure {
     background-image: linear-gradient(to bottom, var(--color-blue-1), black);
     box-shadow: 0 0 1px #999;
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
     border-radius: 500px;
     position: relative;
 }
@@ -128,7 +128,7 @@ figure img {
     border-radius: 500px;
     filter: brightness(1.1);
     filter: grayscale(1);
-    height: 150px;
+    height: 120px;
 }
 figure::after {
     content: '';
@@ -139,7 +139,7 @@ figure::after {
     height: 18px;
     width: 18px;
     position: absolute;
-    right: 20px;
+    right: 10px;
 }
 .description ul {
     list-style-type: none;
