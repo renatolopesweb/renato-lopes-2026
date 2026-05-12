@@ -3,9 +3,9 @@ const flagEn = document.querySelector('.flag-en');
 const flagEs = document.querySelector('.flag-es');
 
 const descriptionSection = document.querySelector('.description-text');
-const descriptionPt = `Olá, sou o <strong class="text-blue">Renato Lopes</strong>, especialista em <strong class="text-blue">web</strong> usando tecnologias de CMS como Adobe Experience Manager (AEM), WordPress, Drupal ou handcoded (HTML, CSS, JS).`;
-const descriptionEn = `Hello, I'm <strong class="text-blue">Renato Lopes</strong>, a specialist in <strong class="text-blue">web</strong> using CMS technologies such as Adobe Experience Manager (AEM), WordPress, Drupal or handcoded (HTML, CSS, JS).`;
-const descriptionEs = `Hola, soy <strong class="text-blue">Renato Lopes</strong>, especialista en <strong class="text-blue">web</strong> usando tecnologías de CMS como Adobe Experience Manager (AEM), WordPress, Drupal o handcoded (HTML, CSS, JS).`;
+const descriptionPt = `Olá, sou o <strong class="text-blue">Renato Lopes</strong>, especialista em <strong class="text-blue">desenvolvimento web</strong> usando tecnologias de CMS como Adobe Experience Manager (AEM), WordPress, Drupal ou handcoded (HTML, CSS, JS).`;
+const descriptionEn = `Hello, I'm <strong class="text-blue">Renato Lopes</strong>, a specialist in <strong class="text-blue">web development</strong> using CMS technologies such as Adobe Experience Manager (AEM), WordPress, Drupal or handcoded (HTML, CSS, JS).`;
+const descriptionEs = `Hola, soy <strong class="text-blue">Renato Lopes</strong>, especialista en <strong class="text-blue">desarrollo web</strong> usando tecnologías de CMS como Adobe Experience Manager (AEM), WordPress, Drupal o handcoded (HTML, CSS, JS).`;
 
 // const LangContact = document.querySelector('.language-contact');
 // const LangContactPt = `Contato:`;
