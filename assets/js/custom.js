@@ -54,10 +54,7 @@ if (trigger && projectsSection) {
   trigger.addEventListener('click', (e) => {
     e.preventDefault();
 
-    // mostra a section
     projectsSection.classList.add('is-visible');
-
-    // scroll suave até ela
     projectsSection.scrollIntoView({
       behavior: 'smooth'
     });
