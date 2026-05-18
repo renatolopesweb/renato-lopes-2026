@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+/*?utm=*
+/search
+
+Sitemap: https://renatolopes.com.br/sitemap.xml
