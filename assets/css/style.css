@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
-    --color-black: #32323e;
-    --color-blue-1: #135ece;
+    --color-black: #3e3e32;
+    --color-primary: #aea15a;
     --color-blue-2: #0c3e87;
     --color-blue-3: #08316f;
     --color-gray-1: #F6F6FA;
@@ -35,7 +35,7 @@ main {
     background-color: var(--color-gray-1);
 }
 .text-blue {
-    color: var(--color-blue-1);
+    color: var(--color-primary);
 }
 
 nav {
@@ -116,7 +116,7 @@ nav button {
 }
 
 figure {
-    /* background-image: linear-gradient(to bottom, var(--color-blue-1), black); */
+    /* background-image: linear-gradient(to bottom, var(--color-primary), black); */
     background-color: #fdfdfd;
     box-shadow: 0 0 1px #999;
     height: 120px;
@@ -151,13 +151,13 @@ figure::after {
 }
 
 .description li i {
-    color: var(--color-blue-1);
+    color: var(--color-primary);
     text-align: left;
     width: 16px;
 }
 
 .description li a {
-    color: var(--color-blue-1);
+    color: var(--color-primary);
     font-size: 1.3rem;
 }
 
