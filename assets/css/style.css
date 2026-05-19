@@ -116,7 +116,8 @@ nav button {
 }
 
 figure {
-    background-image: linear-gradient(to bottom, var(--color-blue-1), black);
+    /* background-image: linear-gradient(to bottom, var(--color-blue-1), black); */
+    background-color: #fdfdfd;
     box-shadow: 0 0 1px #999;
     height: 120px;
     width: 120px;
@@ -127,7 +128,7 @@ figure {
 figure img {
     border-radius: 500px;
     filter: brightness(1.1);
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
     height: 120px;
 }
 figure::after {
