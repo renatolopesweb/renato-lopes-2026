@@ -94,6 +94,7 @@ section{
 }
 article{
     padding: 2rem;
+    max-width: 1024px;
 }
 section article h1{
     font-size: 3rem;
@@ -104,6 +105,7 @@ section article h1{
 section article p{
     font-size: 1.4rem;
     font-weight: normal;
+    line-height: 40px;
     margin-bottom: 3rem;
     margin-top: 1rem;
 }
