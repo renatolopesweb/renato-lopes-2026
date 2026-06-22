@@ -25,7 +25,7 @@ body {
 }
 
 header{
-    background-color: var(--color-black);
+    background-image: linear-gradient(to bottom, #999, #fff);
     height: 50vh;
     margin-bottom: 5vh;
     width: 100%;
@@ -125,7 +125,6 @@ section article p{
 }
 .links{
     display: grid;
-    min-height: 30vh;
 }
 .btn{
     border: 2px solid var(--color-primary);
