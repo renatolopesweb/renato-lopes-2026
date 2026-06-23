@@ -60,15 +60,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnProjects = document.getElementById("btnProjects");
   // const btnContact = document.getElementById("btnContact");
   const projects = document.querySelector(".projects");
-  const contact = document.querySelector(".contact");
+  // const contact = document.querySelector(".contact");
 
 btnProjects.addEventListener("click", () => {
   projects.classList.add("show");
-  contact.classList.remove("show");
+  // contact.classList.remove("show");
 });
 
-btnContact.addEventListener("click", () => {
-  contact.classList.add("show");
-  projects.classList.remove("show");
-});
+// btnContact.addEventListener("click", () => {
+//   contact.classList.add("show");
+//   projects.classList.remove("show");
+// });
 });
