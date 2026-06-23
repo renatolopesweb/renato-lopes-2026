@@ -31,7 +31,7 @@ header{
     width: 100%;
 }
 
-.text-blue {
+.text-primary {
     color: var(--color-primary);
 }
 
