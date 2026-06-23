@@ -25,7 +25,7 @@ body {
 }
 
 header{
-    background-image: linear-gradient(to bottom, #999, #fff);
+    background-image: linear-gradient(to bottom, #c8c8c8, #fff);
     height: 50vh;
     margin-bottom: 5vh;
     width: 100%;
