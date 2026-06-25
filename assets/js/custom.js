@@ -3,9 +3,9 @@ const flagEn = document.querySelector('.flag-en');
 const flagEs = document.querySelector('.flag-es');
 
 const descriptionSection = document.querySelector('.description-text');
-const descriptionPt = `Olá, sou especialista em CMS como Adobe Experience Manager (AEM), WordPress, Drupal ou desenvolvimento handcoded (HTML, CSS, JS). Entre em contato via `;
-const descriptionEn = `Hello, I'm specialist in CMS technologies such as Adobe Experience Manager (AEM), WordPress, Drupal, or custom handcoded (HTML, CSS, JS). Get in touch on `;
-const descriptionEs = `Hola, soy especialista en CMS como Adobe Experience Manager (AEM), WordPress, Drupal o desarrollo handcoded (HTML, CSS, JS). Ponte en contacto a través de `;
+const descriptionPt = `Olá, sou especialista em CMS como WordPress, Drupal, Adobe Experience Manager (AEM) ou desenvolvimento handcoded (HTML, CSS, JS). Entre em contato via `;
+const descriptionEn = `Hello, I'm specialist in CMS technologies such as WordPress, Drupal, Adobe Experience Manager (AEM) or custom handcoded (HTML, CSS, JS). Get in touch on `;
+const descriptionEs = `Hola, soy especialista en CMS como WordPress, Drupal, Adobe Experience Manager (AEM) o desarrollo handcoded (HTML, CSS, JS). Ponte en contacto a través de `;
 
 // const LangContact = document.querySelector('.language-contact');
 // const LangContactPt = `Entre em contato via`;
