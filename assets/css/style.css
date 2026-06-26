@@ -36,7 +36,7 @@ header{
 }
 
 nav {
-    background-color: var(--color-black);
+    background-color: #fff;
     padding: 1rem;
     position: absolute;
     position: fixed;
@@ -51,7 +51,7 @@ nav li {
     margin-right: 1rem;
 }
 nav li a, nav li button{
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 nav button {
