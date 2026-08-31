@@ -1,0 +1,155 @@
+
+ @import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One");
+
+.container {
+    background-color: #f0f0f0;
+    display: grid;
+    height: 100vh;
+}
+
+.make3D {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%) rotateX(60deg) rotateZ(-35deg);
+    transform-style: preserve-3d;
+    }
+
+.make3D .text {
+    font-family: "Rubik Mono One", sans-serif;
+  display: inline-block;
+  text-align: center;
+  font-size: 15vw;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+/* todos exceto o primeiro */
+.make3D .text:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  transform-style: preserve-3d;
+
+  color: #fbfbfb;
+  text-shadow: 0 0 20px rgba(124, 124, 124, 0.4);
+}
+
+/* primeiro */
+.make3D .text:first-child {
+  color: #fff;
+}
+
+/* último */
+.make3D .text:last-child {
+  text-shadow: 2px 2px 10px rgb(255, 255, 255);
+}
+
+/* equivalente do @for */
+.make3D .text:nth-child(1) {
+  z-index: -1;
+  transform: translate3d(0, 0, -1px);
+}
+
+.make3D .text:nth-child(2) {
+  z-index: -2;
+  transform: translate3d(0, 0, -2px);
+}
+
+.make3D .text:nth-child(3) {
+  z-index: -3;
+  transform: translate3d(0, 0, -3px);
+}
+
+.make3D .text:nth-child(4) {
+  z-index: -4;
+  transform: translate3d(0, 0, -4px);
+}
+
+.make3D .text:nth-child(5) {
+  z-index: -5;
+  transform: translate3d(0, 0, -5px);
+}
+
+.make3D .text:nth-child(6) {
+  z-index: -6;
+  transform: translate3d(0, 0, -6px);
+}
+
+.make3D .text:nth-child(7) {
+  z-index: -7;
+  transform: translate3d(0, 0, -7px);
+}
+
+.make3D .text:nth-child(8) {
+  z-index: -8;
+  transform: translate3d(0, 0, -8px);
+}
+
+.make3D .text:nth-child(9) {
+  z-index: -9;
+  transform: translate3d(0, 0, -9px);
+}
+
+.make3D .text:nth-child(10) {
+  z-index: -10;
+  transform: translate3d(0, 0, -10px);
+}
+
+.make3D .text:nth-child(11) {
+  z-index: -11;
+  transform: translate3d(0, 0, -11px);
+}
+
+.make3D .text:nth-child(12) {
+  z-index: -12;
+  transform: translate3d(0, 0, -12px);
+}
+
+.make3D .text:nth-child(13) {
+  z-index: -13;
+  transform: translate3d(0, 0, -13px);
+}
+
+.make3D .text:nth-child(14) {
+  z-index: -14;
+  transform: translate3d(0, 0, -14px);
+}
+
+.make3D .text:nth-child(15) {
+  z-index: -15;
+  transform: translate3d(0, 0, -15px);
+}
+
+.make3D .text:nth-child(16) {
+  z-index: -16;
+  transform: translate3d(0, 0, -16px);
+}
+
+.make3D .text:nth-child(17) {
+  z-index: -17;
+  transform: translate3d(0, 0, -17px);
+}
+
+.make3D .text:nth-child(18) {
+  z-index: -18;
+  transform: translate3d(0, 0, -18px);
+}
+
+.make3D .text:nth-child(19) {
+  z-index: -19;
+  transform: translate3d(0, 0, -19px);
+}
+
+.make3D .text:nth-child(20) {
+  z-index: -20;
+  transform: translate3d(0, 0, -20px);
+}
+
+.make3D .text:nth-child(21) {
+  z-index: -21;
+  transform: translate3d(0, 0, -21px);
+}
