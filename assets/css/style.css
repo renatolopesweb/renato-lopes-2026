@@ -4,8 +4,8 @@
 :root {
     --color-black: #010101;
     --color-primary: #1062FE;
-    --color-gray: #ededed;
-    --color-white: #fff;
+    --color-gray: #d1d1d1;
+    --color-white: #f6f6f6;
     --border-default: 10px;
     --box-shadow-default: 1px 3px 3px #e1e0e0;
 }
@@ -81,49 +81,53 @@ h2{
 .project-link a:hover{
     text-decoration: underline;
 }
-.projects{
+.about{
+    align-items: center;
+    background-image: linear-gradient(to bottom, var(--color-white), var(--color-gray));
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2rem;
-    margin-bottom: 7rem;
-    min-height: 75vh;
-    padding: 2rem;
-}
-.projects div{
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-@media (max-width: 992px) {
-    .projects{
-    grid-template-columns: 1fr;
-    min-height: auto;
-}
-.title-projects::after{
-    width: 90%;
-}
-}
-.projects div:hover{
-    transform: translateY(-4px);
-}
-.projects div:active{
-    transform: translateY(4px);
-}
-.projects div img {
-    border-radius: var(--border-default) var(--border-default) 0 0;
-    display: block;
-    width: 100%;
-    object-fit: contain;
-    object-position: center;
-}
-.projects div h3{
-    background-color: var(--color-black);
-    border-radius: 0 0 var(--border-default) var(--border-default);
-    color: #fff;
     font-size: 1.2rem;
-    font-weight: bold;
-    padding: 1.2rem 0;
+    grid-template-columns: auto auto;
+    min-height: 100vh;
 }
+.about li{
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+.about a{
+    color: var(--color-primary);
+}
+.about a:hover{
+    text-decoration: underline;
+}
+.about p{
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+}
+.about img{
+    filter: grayscale(1);
+    height: 100vh;
+}
+.about img:hover{
+    filter: grayscale(0);
+}
+.about article{
+    padding: 4rem;
+}
+
+@media (max-width: 992px) {
+    .about{
+    grid-template-columns: 1fr;
+    height: auto;
+    padding-bottom: 6rem;
+    }
+    .about img{
+        filter: grayscale(0);
+        width: 100%;
+        height: auto;
+    }
+}
+
+
 .nav-button {
     align-content: center;
     box-shadow: 1px 1px 12px #4c4c4c;
