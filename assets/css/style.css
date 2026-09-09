@@ -72,7 +72,7 @@ h2{
 }
 .project-link a{
     box-shadow: none;
-    color: var(--color-black);
+    color: var(--color-primary);
     font-size: 1.6rem;
     text-transform: unset;
     margin-bottom: 5rem;
@@ -261,7 +261,6 @@ nav li a:hover, nav button:hover{
 .modal-content{
     align-content: center;
     background-color: #fff;
-    box-shadow: var(--box-shadow-default);
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: auto;
