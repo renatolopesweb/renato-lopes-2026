@@ -9,6 +9,30 @@
 //     }
 // });
 
+const flagPt = document.querySelector('.flag-pt');
+const flagEn = document.querySelector('.flag-en');
+const flagEs = document.querySelector('.flag-es');
+
+const descriptionSection = document.querySelector('.description-text');
+const descriptionPt = `Apaixonado pela web, <strong>Renato Lopes</strong> atua com <strong>Web Design, Front-End e UI</strong>, criando interfaces, websites e aplicações digitais. Experiência com <strong>HTML, CSS, JavaScript, React, WordPress, Drupal, Adobe AEM e Figma</strong>.`;
+const descriptionEn = `Passionate about the web, <strong>Renato Lopes</strong> works with <strong>Web Design, Front-End Development, and UI Design</strong>, creating interfaces, websites, and digital applications. Experienced with <strong>HTML, CSS, JavaScript, React, WordPress, Drupal, Adobe AEM, and Figma</strong>.`;
+const descriptionEs = `Apasionado por la web, <strong>Renato Lopes</strong> trabaja en <strong>Diseño Web, Front-End y Diseño de Interfaces (UI)</strong>, creando interfaces, sitios web y aplicaciones digitales. Cuenta con experiencia en <strong>HTML, CSS, JavaScript, React, WordPress, Drupal, Adobe AEM y Figma</strong>.`;
+
+(function () {
+  descriptionSection.innerHTML = descriptionPt;
+})();
+flagPt.addEventListener('click', (e) => {
+  e.preventDefault();
+  descriptionSection.innerHTML = descriptionPt;
+});
+flagEn.addEventListener('click', (e) => {
+  e.preventDefault();
+  descriptionSection.innerHTML = descriptionEn;
+});
+flagEs.addEventListener('click', (e) => {
+  e.preventDefault();
+  descriptionSection.innerHTML = descriptionEs;
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".make3D").forEach((currentItem) => {
@@ -25,84 +49,4 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     }
   });
-});
-
-// MENU MOBILE
-const navButton = document.querySelector('.nav-button');
-const navSection = document.querySelector('.nav-section');
-const icon = navButton.querySelector('i');
-
-navButton.addEventListener('click', () => {
-    navSection.classList.toggle('active');
-
-    if (navSection.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark');
-    } else {
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
-    }
-});
-
-
-// MODAL SOBRE
-const modal = document.querySelector('.modal-overlay');
-const btnClose = document.querySelector('.btn-close');
-const linkAbout = document.querySelector('.link-about');
-
-// abrir modal
-if (linkAbout) {
-    linkAbout.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.classList.add('active');
-
-        // opcional: fechar menu ao abrir modal
-        navSection.classList.remove('active');
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
-    });
-}
-
-// fechar modal no X
-if (btnClose) {
-    btnClose.addEventListener('click', () => {
-        modal.classList.remove('active');
-    });
-}
-
-// fechar clicando fora do conteúdo
-if (modal) {
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-        }
-    });
-}
-
-
-// FECHAR MENU
-const overlay = document.querySelector('.overlay');
-
-if (overlay) {
-    overlay.addEventListener('click', () => {
-        navSection.classList.remove('active');
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
-    });
-}
-
-const closeIcon = document.querySelector('.close-icon');
-
-if (closeIcon) {
-    closeIcon.addEventListener('click', () => {
-        navSection.classList.remove('active');
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
-    });
-}
-// fechar modal com ESC
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-        modal.classList.remove('active');
-    }
 });
