@@ -1,14 +1,3 @@
-// HEADER SHRINK
-// const header = document.querySelector('header');
-
-// window.addEventListener('scroll', () => {
-//     if (window.scrollY > 0) {
-//         header.classList.add('shrink');
-//     } else {
-//         header.classList.remove('shrink');
-//     }
-// });
-
 const flagPt = document.querySelector('.flag-pt');
 const flagEn = document.querySelector('.flag-en');
 const flagEs = document.querySelector('.flag-es');
