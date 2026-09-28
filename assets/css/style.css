@@ -75,23 +75,23 @@ article::after {
 }
 .about p{
     line-height: 2.5rem;
+    margin: 2rem 0;
 }
 .about article{
     margin: auto;
     max-width: 1024px;
     text-align: center;
 }
-
+.about i{
+    font-size: 1.6rem;
+}
 @media (max-width: 992px) {
     .about{
-        background-image: linear-gradient(to bottom, var(--color-white), var(--color-gray));
+    background-image: linear-gradient(to bottom, var(--color-white), var(--color-gray));
     font-size: 1rem;
     grid-template-columns: 1fr;
     height: auto;
     padding-bottom: 6rem;
-    }
-    .about p{
-        margin: 1rem 0;
     }
     article::before {
     left: 2rem;
@@ -99,6 +99,33 @@ article::after {
     article::after {
     right: 2rem;
     }
+}
+.tooltip {
+    position: relative;
+    display: inline-flex;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -230%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-black);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+    pointer-events: none;
+}
+.tooltip:hover::after,
+.tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
 }
 nav {
     position: absolute;
