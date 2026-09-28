@@ -104,8 +104,8 @@ nav {
     position: absolute;
     position: fixed;
     list-style-type: none;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 1rem;
+    right: 1rem;
     text-align: right;
     width: 100%;
     z-index: 1;
