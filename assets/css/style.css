@@ -96,6 +96,9 @@ article::after {
     article::before {
     left: 2rem;
     }
+    article::after {
+    right: 2rem;
+    }
 }
 nav {
     position: absolute;
