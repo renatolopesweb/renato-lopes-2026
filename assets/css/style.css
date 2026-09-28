@@ -28,53 +28,73 @@ body {
 .text-primary {
     color: var(--color-primary);
 }
+article {
+  position: relative;
+  max-width: 800px;
+  padding: 40px 40px 20px 80px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+article::before {
+  content: "“";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-size: 140px;
+  line-height: 1;
+  color: var(--color-black);
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+
+article::after {
+  content: "”";
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+  font-size: 140px;
+  line-height: 1;
+  color: var(--color-black);
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
 .about{
     align-items: center;
-    background-image: linear-gradient(to bottom, var(--color-white), var(--color-gray));
+    background-image: linear-gradient(to bottom, var(--color-white), #fff);
     display: grid;
     font-size: 1.2rem;
-    grid-template-columns: auto auto;
     min-height: 100vh;
 }
-.about li{
-    list-style-type: none;
-    margin-bottom: 1rem;
-}
 .about a{
-    color: var(--color-primary);
+    color: var(--color-black);
 }
 .about a:hover{
-    text-decoration: underline;
+    text-decoration: none;
 }
 .about p{
     line-height: 2.5rem;
-    margin-bottom: 2rem;
-}
-.about img{
-    filter: grayscale(1);
-    height: 100vh;
-}
-.about img:hover{
-    filter: grayscale(0);
 }
 .about article{
-    padding: 4rem;
+    margin: auto;
+    max-width: 1024px;
+    text-align: center;
 }
 
 @media (max-width: 992px) {
     .about{
-        font-size: 1rem;
+        background-image: linear-gradient(to bottom, var(--color-white), var(--color-gray));
+    font-size: 1rem;
     grid-template-columns: 1fr;
     height: auto;
     padding-bottom: 6rem;
     }
-    .about article{
-    padding: 2rem;
-}
-    .about img{
-        filter: grayscale(0);
-        width: 100%;
-        height: auto;
+    .about p{
+        margin: 1rem 0;
+    }
+    article::before {
+    left: 2rem;
     }
 }
 nav {
@@ -82,7 +102,7 @@ nav {
     position: fixed;
     list-style-type: none;
     bottom: 2rem;
-    right: 4rem;
+    right: 2rem;
     text-align: right;
     width: 100%;
     z-index: 1;
