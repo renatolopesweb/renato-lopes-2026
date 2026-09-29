@@ -3,9 +3,9 @@ const flagEn = document.querySelector('.flag-en');
 const flagEs = document.querySelector('.flag-es');
 
 const descriptionSection = document.querySelector('.description-text');
-const descriptionPt = `Renato Lopes atua com Web Design, Front-End e UI, criando interfaces, websites e aplicações digitais. Experiência com HTML, CSS, JavaScript, React, WordPress, Drupal, Adobe AEM e Figma.`;
-const descriptionEn = `Renato Lopes works with Web Design, Front-End Development, and UI Design, creating interfaces, websites, and digital applications. Experienced with HTML, CSS, JavaScript, React, WordPress, Drupal, Adobe AEM, and Figma.`;
-const descriptionEs = `Renato Lopes trabaja en Diseño Web, Front-End y Diseño de Interfaces (UI), creando interfaces, sitios web y aplicaciones digitales. Cuenta con experiencia en HTML, CSS, JavaScript, React, WordPress, Drupal, Adobe AEM y Figma.`;
+const descriptionPt = `Renato Lopes atua com Web Design, Front-End e UI, criando interfaces, websites e aplicações digitais. Experiência com Figma, HTML, CSS, JavaScript, React, WordPress, Drupal, Adobe AEM.`;
+const descriptionEn = `Renato Lopes works with Web Design, Front-End Development, and UI Design, creating interfaces, websites, and digital applications. Experienced with Figma, HTML, CSS, JavaScript, React, WordPress, Drupal, Adobe AEM.`;
+const descriptionEs = `Renato Lopes trabaja en Diseño Web, Front-End y Diseño de Interfaces (UI), creando interfaces, sitios web y aplicaciones digitales. Cuenta con experiencia en Figma, HTML, CSS, JavaScript, React, WordPress, Drupal, Adobe AEM.`;
 
 (function () {
   descriptionSection.innerHTML = descriptionPt;
