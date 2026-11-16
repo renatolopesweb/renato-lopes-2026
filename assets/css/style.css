@@ -30,7 +30,7 @@ body {
 }
 article {
   position: relative;
-  padding: 40px;
+  padding: 1rem;
   font-size: 1rem;
   color: var(--color-black);
 }
