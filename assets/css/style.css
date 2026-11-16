@@ -152,7 +152,7 @@ nav li {
 }
 nav li a, nav li button{
     color: var(--color-black);
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-weight: bold;
 }
 
