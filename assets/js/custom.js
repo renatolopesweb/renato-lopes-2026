@@ -12,21 +12,29 @@ const LangContactPt = `Contato`;
 const LangContactEn = `Contact `;
 const LangContactEs = `Contacto `;
 
+const LangResume = document.querySelector('.language-resume');
+const LangResumePt = `Currículo`;
+const LangResumeEn = `Resume (pt-br) `;
+const LangResumeEs = `Currículum (pt-br) `;
+
 
 flagPt.addEventListener('click', (e) => {
   e.preventDefault();
   descriptionSection.innerHTML = descriptionPt;
    LangContact.innerHTML = LangContactPt;
+   LangResume.innerHTML = LangResumePt;
 });
 flagEn.addEventListener('click', (e) => {
   e.preventDefault();
   descriptionSection.innerHTML = descriptionEn;
    LangContact.innerHTML = LangContactEn;
+   LangResume.innerHTML = LangResumeEn;
 });
 flagEs.addEventListener('click', (e) => {
   e.preventDefault();
   descriptionSection.innerHTML = descriptionEs;
    LangContact.innerHTML = LangContactEs;
+   LangResume.innerHTML = LangResumeEs;
 });
 
 document.addEventListener("DOMContentLoaded", () => {
